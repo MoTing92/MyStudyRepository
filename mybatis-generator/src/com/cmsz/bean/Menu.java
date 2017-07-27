@@ -3,9 +3,9 @@ package com.cmsz.bean;
 public class Menu {
     private Integer menuid;
 
-    private String menuname;
+    private String menuName;
 
-    private String menudesc;
+    private String menuPower;
 
     public Integer getMenuid() {
         return menuid;
@@ -15,19 +15,19 @@ public class Menu {
         this.menuid = menuid;
     }
 
-    public String getMenuname() {
-        return menuname;
+    public String getMenuName() {
+        return menuName;
     }
 
-    public void setMenuname(String menuname) {
-        this.menuname = menuname == null ? null : menuname.trim();
+    public void setMenuName(String menuName) {
+        this.menuName = menuName == null ? null : menuName.trim();
     }
 
-    public String getMenudesc() {
-        return menudesc;
+    public String getMenuPower() {
+        return menuPower;
     }
 
-    public void setMenudesc(String menudesc) {
-        this.menudesc = menudesc == null ? null : menudesc.trim();
+    public void setMenuPower(String menuPower) {
+        this.menuPower = menuPower == null ? null : menuPower.trim();
     }
 }
