@@ -13,7 +13,7 @@
         </commentGenerator>    
         <!--数据库链接URL、用户名、密码 -->    
         <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
-	        connectionURL="jdbc:mysql://localhost/tdsq" 
+	        connectionURL="jdbc:mysql://localhost/permsdimo" 
 	        userId="root" 
 	        password="123">    
         </jdbcConnection>    
@@ -21,61 +21,36 @@
             <property name="forceBigDecimals" value="false"/>    
         </javaTypeResolver>    
         <!-- 生成模型的包名和位置-->    
-        <javaModelGenerator targetPackage="com.cmsz.bean" targetProject="mybatis-generator">    
+        <javaModelGenerator targetPackage="com.cmsz.springboot.domain" targetProject="mybatis-generator">    
             <property name="enableSubPackages" value="true"/>    
             <property name="trimStrings" value="true"/>    
         </javaModelGenerator>    
         <!-- 生成映射文件的包名和位置-->    
-        <sqlMapGenerator targetPackage="com.cmsz.mapper" targetProject="mybatis-generator">    
+        <sqlMapGenerator targetPackage="mappers" targetProject="mybatis-generator">    
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>    
         <!-- 生成DAO的包名和位置-->    
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.cmsz.dao" targetProject="mybatis-generator">    
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.cmsz.springboot.mapper" targetProject="mybatis-generator">    
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>    
           
         <!--生成对应表及类名-->
         
-        <table tableName="open_user_msg" domainObjectName="OpenUserMsg" 
+        <table tableName="user" domainObjectName="User" 
+			enableCountByExample="false" enableUpdateByExample="false" 
+			enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false">
+		</table>
+		<!-- <table tableName="role" domainObjectName="Role" 
 			enableCountByExample="false" enableUpdateByExample="false" 
 			enableDeleteByExample="false" enableSelectByExample="false" 
 			selectByExampleQueryId="false">
 		</table> 
+		<table tableName="menu" domainObjectName="Menu" 
+			enableCountByExample="false" enableUpdateByExample="false" 
+			enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false">
+		</table>   -->
         
-        <table tableName="own_group" domainObjectName="OwnGroup" 
-			enableCountByExample="false" enableUpdateByExample="false" 
-			enableDeleteByExample="false" enableSelectByExample="false" 
-			selectByExampleQueryId="false">
-		</table>
-        
-        <table tableName="history" domainObjectName="History" 
-			enableCountByExample="false" enableUpdateByExample="false" 
-			enableDeleteByExample="false" enableSelectByExample="false" 
-			selectByExampleQueryId="false">
-		</table>
-        
-        <table tableName="menu" domainObjectName="Menu" 
-			enableCountByExample="false" enableUpdateByExample="false" 
-			enableDeleteByExample="false" enableSelectByExample="false" 
-			selectByExampleQueryId="false">
-		</table>
-		<table tableName="property" domainObjectName="Property" 
-			enableCountByExample="false" enableUpdateByExample="false" 
-			enableDeleteByExample="false" enableSelectByExample="false" 
-			selectByExampleQueryId="false">
-		</table>
-		
-		<table tableName="role" domainObjectName="Role" 
-			enableCountByExample="false" enableUpdateByExample="false" 
-			enableDeleteByExample="false" enableSelectByExample="false" 
-			selectByExampleQueryId="false">
-		</table>
-		  
-		<table tableName="user" domainObjectName="User" 
-			enableCountByExample="false" enableUpdateByExample="false" 
-			enableDeleteByExample="false" enableSelectByExample="false" 
-			selectByExampleQueryId="false">
-		</table>
-		
 	</context>    
 </generatorConfiguration> 
