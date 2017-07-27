@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cmsz.dao.ApplyMsgDao" >
+  <resultMap id="BaseResultMap" type="com.cmsz.bean.ApplyMsg" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="phone_number" property="phoneNumber" jdbcType="VARCHAR" />
+    <result column="account_name" property="accountName" jdbcType="VARCHAR" />
+    <result column="main_path" property="mainPath" jdbcType="VARCHAR" />
+    <result column="account_properties" property="accountProperties" jdbcType="INTEGER" />
+    <result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+    <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+    <result column="sub_system" property="subSystem" jdbcType="VARCHAR" />
+    <result column="platform" property="platform" jdbcType="VARCHAR" />
+    <result column="apply_reason" property="applyReason" jdbcType="VARCHAR" />
+    <result column="handle_person" property="handlePerson" jdbcType="INTEGER" />
+    <result column="work_duty" property="workDuty" jdbcType="VARCHAR" />
+    <result column="apply_time" property="applyTime" jdbcType="TIMESTAMP" />
+    <result column="power_detail" property="powerDetail" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="apply_status" property="applyStatus" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_id, phone_number, account_name, main_path, account_properties, start_time, 
+    end_time, sub_system, platform, apply_reason, handle_person, work_duty, apply_time, 
+    power_detail, remark, apply_status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from apply_msg
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from apply_msg
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insertSelective" parameterType="com.cmsz.bean.ApplyMsg" useGeneratedKeys="true" keyProperty="id" >
+    insert into apply_msg
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="phoneNumber != null" >
+        phone_number,
+      </if>
+      <if test="accountName != null" >
+        account_name,
+      </if>
+      <if test="mainPath != null" >
+        main_path,
+      </if>
+      <if test="accountProperties != null" >
+        account_properties,
+      </if>
+      <if test="startTime != null" >
+        start_time,
+      </if>
+      <if test="endTime != null" >
+        end_time,
+      </if>
+      <if test="subSystem != null" >
+        sub_system,
+      </if>
+      <if test="platform != null" >
+        platform,
+      </if>
+      <if test="applyReason != null" >
+        apply_reason,
+      </if>
+      <if test="handlePerson != null" >
+        handle_person,
+      </if>
+      <if test="workDuty != null" >
+        work_duty,
+      </if>
+      <if test="applyTime != null" >
+        apply_time,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="powerDetail != null" >
+        power_detail,
+      </if>
+      <if test="applyStatus != null" >
+        apply_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="phoneNumber != null" >
+        #{phoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="accountName != null" >
+        #{accountName,jdbcType=VARCHAR},
+      </if>
+      <if test="mainPath != null" >
+        #{mainPath,jdbcType=VARCHAR},
+      </if>
+      <if test="accountProperties != null" >
+        #{accountProperties,jdbcType=INTEGER},
+      </if>
+      <if test="startTime != null" >
+        #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null" >
+        #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="subSystem != null" >
+        #{subSystem,jdbcType=VARCHAR},
+      </if>
+      <if test="platform != null" >
+        #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="applyReason != null" >
+        #{applyReason,jdbcType=VARCHAR},
+      </if>
+      <if test="handlePerson != null" >
+        #{handlePerson,jdbcType=INTEGER},
+      </if>
+      <if test="workDuty != null" >
+        #{workDuty,jdbcType=VARCHAR},
+      </if>
+      <if test="applyTime != null" >
+        #{applyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="powerDetail != null" >
+        #{powerDetail,jdbcType=VARCHAR},
+      </if>
+      <if test="applyStatus != null" >
+        #{applyStatus,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cmsz.bean.ApplyMsg" >
+    update apply_msg
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="phoneNumber != null" >
+        phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="accountName != null" >
+        account_name = #{accountName,jdbcType=VARCHAR},
+      </if>
+      <if test="mainPath != null" >
+        main_path = #{mainPath,jdbcType=VARCHAR},
+      </if>
+      <if test="accountProperties != null" >
+        account_properties = #{accountProperties,jdbcType=INTEGER},
+      </if>
+      <if test="startTime != null" >
+        start_time = #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null" >
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="subSystem != null" >
+        sub_system = #{subSystem,jdbcType=VARCHAR},
+      </if>
+      <if test="platform != null" >
+        platform = #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="applyReason != null" >
+        apply_reason = #{applyReason,jdbcType=VARCHAR},
+      </if>
+      <if test="handlePerson != null" >
+        handle_person = #{handlePerson,jdbcType=INTEGER},
+      </if>
+      <if test="workDuty != null" >
+        work_duty = #{workDuty,jdbcType=VARCHAR},
+      </if>
+      <if test="applyTime != null" >
+        apply_time = #{applyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="powerDetail != null" >
+        power_detail = #{powerDetail,jdbcType=VARCHAR},
+      </if>
+      <if test="applyStatus != null" >
+        apply_status = #{applyStatus,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="query" parameterType="com.cmsz.bean.RequestMsg" resultType="com.cmsz.bean.ApplyMsg">
+  	select 
+  	t1.*,t2.username,t2.real_name
+  	from apply_msg t1 inner join user t2 on t1.user_id = t2.user_id
+  	<where>
+  		<if test="applyStatus != null">
+  			and t1.apply_status = #{applyStatus}
+  		</if>
+  		<if test="username != null">
+  			and t2.username like "%"#{username}"%"
+  		</if>
+  		<if test="userId != null">
+  			and (t1.handle_person = #{userId} or t1.user_id = #{userId})
+  		</if>
+  	</where>
+  </select>
+ 	
+ 	<select id="look" resultType="com.cmsz.bean.ApplyMsg" parameterType="int">
+ 		select 
+  		*
+  		from apply_msg t1 inner join user t2 on t1.user_id = t2.user_id
+  		where t1.id = #{id}
+ 	</select>
+	
+	<select id="queryHandlePersonByUserId" parameterType="int" resultType="com.cmsz.bean.User">
+		select * from user 
+		where user_id = (
+			select group_team from own_group
+				where group_id = (	
+					select group_id from user where user_id = #{userId}
+					)
+				)
+	</select>  
+</mapper>
