@@ -3,13 +3,13 @@ package com.cmsz.dao;
 import com.cmsz.bean.Role;
 
 public interface RoleDao {
-    int deleteByPrimaryKey(Integer roleid);
+    int deleteByPrimaryKey(Integer roleId);
 
     int insert(Role record);
 
     int insertSelective(Role record);
 
-    Role selectByPrimaryKey(Integer roleid);
+    Role selectByPrimaryKey(Integer roleId);
 
     int updateByPrimaryKeySelective(Role record);
 

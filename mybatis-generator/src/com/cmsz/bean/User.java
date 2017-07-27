@@ -1,41 +1,21 @@
 package com.cmsz.bean;
 
-public class User {
-    private Integer userid;
-
-    private String username;
-
+public class User extends UserKey {
     private String password;
 
-    private String realname;
-
-    private String phoneNum;
+    private String realName;
 
     private String email;
 
-    private String number4a;
+    private String fourA;
 
-    private String need;
+    private String workDuty;
 
-    private String company;
+    private String workCom;
 
-    private Integer superid;
+    private Integer level;
 
-    public Integer getUserid() {
-        return userid;
-    }
-
-    public void setUserid(Integer userid) {
-        this.userid = userid;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
-    }
+    private Integer groupId;
 
     public String getPassword() {
         return password;
@@ -45,20 +25,12 @@ public class User {
         this.password = password == null ? null : password.trim();
     }
 
-    public String getRealname() {
-        return realname;
+    public String getRealName() {
+        return realName;
     }
 
-    public void setRealname(String realname) {
-        this.realname = realname == null ? null : realname.trim();
-    }
-
-    public String getPhoneNum() {
-        return phoneNum;
-    }
-
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum == null ? null : phoneNum.trim();
+    public void setRealName(String realName) {
+        this.realName = realName == null ? null : realName.trim();
     }
 
     public String getEmail() {
@@ -69,35 +41,43 @@ public class User {
         this.email = email == null ? null : email.trim();
     }
 
-    public String getNumber4a() {
-        return number4a;
+    public String getFourA() {
+        return fourA;
     }
 
-    public void setNumber4a(String number4a) {
-        this.number4a = number4a == null ? null : number4a.trim();
+    public void setFourA(String fourA) {
+        this.fourA = fourA == null ? null : fourA.trim();
     }
 
-    public String getNeed() {
-        return need;
+    public String getWorkDuty() {
+        return workDuty;
     }
 
-    public void setNeed(String need) {
-        this.need = need == null ? null : need.trim();
+    public void setWorkDuty(String workDuty) {
+        this.workDuty = workDuty == null ? null : workDuty.trim();
     }
 
-    public String getCompany() {
-        return company;
+    public String getWorkCom() {
+        return workCom;
     }
 
-    public void setCompany(String company) {
-        this.company = company == null ? null : company.trim();
+    public void setWorkCom(String workCom) {
+        this.workCom = workCom == null ? null : workCom.trim();
     }
 
-    public Integer getSuperid() {
-        return superid;
+    public Integer getLevel() {
+        return level;
     }
 
-    public void setSuperid(Integer superid) {
-        this.superid = superid;
+    public void setLevel(Integer level) {
+        this.level = level;
+    }
+
+    public Integer getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Integer groupId) {
+        this.groupId = groupId;
     }
 }

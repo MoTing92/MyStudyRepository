@@ -1,33 +1,33 @@
 package com.cmsz.bean;
 
 public class Role {
-    private Integer roleid;
+    private Integer roleId;
 
-    private String rolename;
+    private String roleName;
 
-    private String roledesc;
+    private String rolePower;
 
-    public Integer getRoleid() {
-        return roleid;
+    public Integer getRoleId() {
+        return roleId;
     }
 
-    public void setRoleid(Integer roleid) {
-        this.roleid = roleid;
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
     }
 
-    public String getRolename() {
-        return rolename;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setRolename(String rolename) {
-        this.rolename = rolename == null ? null : rolename.trim();
+    public void setRoleName(String roleName) {
+        this.roleName = roleName == null ? null : roleName.trim();
     }
 
-    public String getRoledesc() {
-        return roledesc;
+    public String getRolePower() {
+        return rolePower;
     }
 
-    public void setRoledesc(String roledesc) {
-        this.roledesc = roledesc == null ? null : roledesc.trim();
+    public void setRolePower(String rolePower) {
+        this.rolePower = rolePower == null ? null : rolePower.trim();
     }
 }
