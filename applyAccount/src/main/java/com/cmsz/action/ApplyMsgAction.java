@@ -179,11 +179,11 @@ public class ApplyMsgAction {
 	 * **/
 	@RequestMapping(value="/exportApply",method = RequestMethod.GET)
 	@ResponseBody
-	public ReturnMsg<ApplyMsg> exportApply(){
+	public ReturnMsg<ApplyMsg> exportApply(int id){
 		ReturnMsg<ApplyMsg> returnMsg = new ReturnMsg<ApplyMsg>();
 		boolean isSuccess =false;
 		try {
-			PathBean path = new PathBean("E:/",71);
+			PathBean path = new PathBean("E:/",id);
 			isSuccess = applyService.exportApply(path );
 		} catch (Exception e) {
 			e.printStackTrace();

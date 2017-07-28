@@ -69,12 +69,6 @@ public class ExportExcel {
         sheet.setDefaultColumnStyle(3, style5);
         sheet.setDefaultColumnStyle(4, style5);
         sheet.setDefaultColumnStyle(5, style5);
-//        sheet.autoSizeColumn(0);
-//        sheet.autoSizeColumn(1);
-//        sheet.autoSizeColumn(2);
-//        sheet.autoSizeColumn(3);
-//        sheet.autoSizeColumn(4);
-//        sheet.autoSizeColumn(5);
 
         //合并单元格
         CellRangeAddress region1 = new CellRangeAddress(0, 0, 0, 5);
@@ -273,7 +267,7 @@ public class ExportExcel {
         
         HSSFRow row17 = sheet.createRow(16);
         HSSFCell cell_17_1 = row17.createCell(0);
-        cell_17_1.setCellValue("业务使用部门主管意见");
+        cell_17_1.setCellValue("部门主管意见");
         HSSFCell cell_17_2 = row17.createCell(1);
         HSSFCell cell_17_3 = row17.createCell(2);
         cell_17_3.setCellValue("签名");
@@ -289,7 +283,7 @@ public class ExportExcel {
         
         HSSFRow row18 = sheet.createRow(17);
         HSSFCell cell_18_1 = row18.createCell(0);
-        cell_18_1.setCellValue("业务使用部门主管意见");
+        cell_18_1.setCellValue("配置管理员意见");
         HSSFCell cell_18_2 = row18.createCell(1);
         HSSFCell cell_18_3 = row18.createCell(2);
         cell_18_3.setCellValue("签名");

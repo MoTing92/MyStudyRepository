@@ -187,4 +187,16 @@ public class User {
 		this.groupName = groupName;
 	}
 
+	public User(Integer userId, String username, String realName,Date expireTime) {
+		super();
+		this.userId = userId;
+		this.username = username;
+		this.realName = realName;
+		this.expireTime = expireTime;
+	}
+	
+	public User() {
+		super();
+	}
+
 }
