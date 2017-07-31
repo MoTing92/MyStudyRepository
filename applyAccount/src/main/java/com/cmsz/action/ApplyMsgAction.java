@@ -1,19 +1,35 @@
 package com.cmsz.action;
 
 
+<<<<<<< HEAD
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+=======
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+>>>>>>> myDevelop
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+<<<<<<< HEAD
+=======
+import org.springframework.web.bind.annotation.RequestParam;
+>>>>>>> myDevelop
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cmsz.bean.ApplyMsg;
 import com.cmsz.bean.OwnGroup;
+<<<<<<< HEAD
 import com.cmsz.bean.PathBean;
+=======
+>>>>>>> myDevelop
 import com.cmsz.bean.RequestMsg;
 import com.cmsz.bean.ReturnApplyMsg;
 import com.cmsz.bean.ReturnMsg;
@@ -83,7 +99,10 @@ public class ApplyMsgAction {
 			//添加
 			isSuccess = applyService.add(applyMsg,request);
 		} catch (Exception e) {
+<<<<<<< HEAD
 			// TODO Auto-generated catch block
+=======
+>>>>>>> myDevelop
 			LOGGER.error("ApplyMsgAction的add请求异常",e);
 			e.printStackTrace();
 		}
@@ -112,7 +131,10 @@ public class ApplyMsgAction {
 			try {
 				re=applyService.deal(requestMsg, request);
 			} catch (Exception e) {
+<<<<<<< HEAD
 				// TODO Auto-generated catch block
+=======
+>>>>>>> myDevelop
 				LOGGER.error("ApplyMsgAction的deal请求出现异常", e);
 				e.printStackTrace();
 			}
@@ -138,7 +160,10 @@ public class ApplyMsgAction {
 		try {
 			apply = applyService.look(id);
 		} catch (Exception e) {
+<<<<<<< HEAD
 			// TODO Auto-generated catch block
+=======
+>>>>>>> myDevelop
 			e.printStackTrace();
 			LOGGER.error("ApplyMsgAction的look请求出现异常",e);
 		}
@@ -165,7 +190,10 @@ public class ApplyMsgAction {
 		try {
 			returnMsg.setData(applyService.getGroup());
 		} catch (Exception e) {
+<<<<<<< HEAD
 			// TODO Auto-generated catch block
+=======
+>>>>>>> myDevelop
 			e.printStackTrace();
 			LOGGER.error("ApplyMsgAction的getGroup请求出现异常",e);
 		}
@@ -178,6 +206,7 @@ public class ApplyMsgAction {
 	 * 响应参数返回状态（state）和消息(message)
 	 * **/
 	@RequestMapping(value="/exportApply",method = RequestMethod.GET)
+<<<<<<< HEAD
 	@ResponseBody
 	public ReturnMsg<ApplyMsg> exportApply(){
 		ReturnMsg<ApplyMsg> returnMsg = new ReturnMsg<ApplyMsg>();
@@ -199,4 +228,13 @@ public class ApplyMsgAction {
 			return returnMsg;
 		}
 	}
+=======
+	public void export(@RequestParam int id,HttpServletResponse response) {  
+	    List<ApplyMsg> applys = new ArrayList<ApplyMsg>();
+	    ApplyMsg apply = applyService.look(id);
+	    applys.add(apply);
+	    applyService.exportApply(id,response);
+	}  
+	
+>>>>>>> myDevelop
 }

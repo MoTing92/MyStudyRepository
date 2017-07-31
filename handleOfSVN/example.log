@@ -1,0 +1,673 @@
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connecting to /192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connection established 192.168.214.140:53231<->192.168.215.190:3343
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Executing request POST /csvn/api/1/user?format=json HTTP/1.1
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.headers - http-outgoing-0 >> POST /csvn/api/1/user?format=json HTTP/1.1
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Content-Length: 180
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Host: 192.168.215.190:3343
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.4 (java 1.5)
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "POST /csvn/api/1/user?format=json HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Content-Length: 180[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Host: 192.168.215.190:3343[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.3.4 (java 1.5)[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "username=liyanjun&password=liyanjun&passwordConfirm=liyanjun&realUserName=%E6%9D%8E%E7%84%B1%E5%86%9B&email=123%40qq.com&description=%E6%B5%8B%E8%AF%95&_authorities=authorities%3A2"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 401 Full authentication is required to access this resource[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Date: Thu, 06 Jul 2017 03:49:39 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Set-Cookie: SESSID=1i28bd4rd5ppthvu4xgf3cbz5;Path=/csvn;HttpOnly[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Type: text/html;charset=ISO-8859-1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Cache-Control: must-revalidate,no-cache,no-store[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Length: 1472[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<html>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<title>Error 401 Full authentication is required to access this resource</title>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<body><h2>HTTP ERROR 401</h2>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<p>Problem accessing /csvn/api/1/user. Reason:[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<pre>    Full authentication is required to access this resource</pre></p><hr /><i><small>Powered by Jetty://</small></i><br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</body>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</html>[\n]"
+DEBUG main org.apache.http.headers - http-outgoing-0 << HTTP/1.1 401 Full authentication is required to access this resource
+DEBUG main org.apache.http.headers - http-outgoing-0 << Date: Thu, 06 Jul 2017 03:49:39 GMT
+DEBUG main org.apache.http.headers - http-outgoing-0 << Set-Cookie: SESSID=1i28bd4rd5ppthvu4xgf3cbz5;Path=/csvn;HttpOnly
+DEBUG main org.apache.http.headers - http-outgoing-0 << WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Type: text/html;charset=ISO-8859-1
+DEBUG main org.apache.http.headers - http-outgoing-0 << Cache-Control: must-revalidate,no-cache,no-store
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Length: 1472
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - Authentication required
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - 192.168.215.190:3343 requested authentication
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Authentication schemes in the order of preference: [negotiate, Kerberos, NTLM, Digest, Basic]
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for negotiate authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Kerberos authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for NTLM authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Digest authentication scheme not available
+DEBUG main org.apache.http.client.protocol.ResponseProcessCookies - Cookie accepted [SESSID="1i28bd4rd5ppthvu4xgf3cbz5", version:0, domain:192.168.215.190, path:/csvn, expiry:null]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://192.168.215.190:3343] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connecting to /192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connection established 192.168.214.140:57264<->192.168.215.190:3343
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Executing request POST /csvn/api/1/user?format=json HTTP/1.1
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.headers - http-outgoing-0 >> POST /csvn/api/1/user?format=json HTTP/1.1
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Content-Length: 180
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Host: 192.168.215.190:3343
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.4 (java 1.5)
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "POST /csvn/api/1/user?format=json HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Content-Length: 180[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Host: 192.168.215.190:3343[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.3.4 (java 1.5)[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "username=liyanjun&password=liyanjun&passwordConfirm=liyanjun&realUserName=%E6%9D%8E%E7%84%B1%E5%86%9B&email=123%40qq.com&description=%E6%B5%8B%E8%AF%95&_authorities=authorities%3A2"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 401 Full authentication is required to access this resource[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Date: Thu, 06 Jul 2017 04:26:51 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Set-Cookie: SESSID=1mr5rvzekqi0653a6uhn6my4q;Path=/csvn;HttpOnly[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Type: text/html;charset=ISO-8859-1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Cache-Control: must-revalidate,no-cache,no-store[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Length: 1472[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<html>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<title>Error 401 Full authentication is required to access this resource</title>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<body><h2>HTTP ERROR 401</h2>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<p>Problem accessing /csvn/api/1/user. Reason:[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<pre>    Full authentication is required to access this resource</pre></p><hr /><i><small>Powered by Jetty://</small></i><br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</body>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</html>[\n]"
+DEBUG main org.apache.http.headers - http-outgoing-0 << HTTP/1.1 401 Full authentication is required to access this resource
+DEBUG main org.apache.http.headers - http-outgoing-0 << Date: Thu, 06 Jul 2017 04:26:51 GMT
+DEBUG main org.apache.http.headers - http-outgoing-0 << Set-Cookie: SESSID=1mr5rvzekqi0653a6uhn6my4q;Path=/csvn;HttpOnly
+DEBUG main org.apache.http.headers - http-outgoing-0 << WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Type: text/html;charset=ISO-8859-1
+DEBUG main org.apache.http.headers - http-outgoing-0 << Cache-Control: must-revalidate,no-cache,no-store
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Length: 1472
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - Authentication required
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - 192.168.215.190:3343 requested authentication
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Authentication schemes in the order of preference: [negotiate, Kerberos, NTLM, Digest, Basic]
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for negotiate authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Kerberos authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for NTLM authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Digest authentication scheme not available
+DEBUG main org.apache.http.client.protocol.ResponseProcessCookies - Cookie accepted [SESSID="1mr5rvzekqi0653a6uhn6my4q", version:0, domain:192.168.215.190, path:/csvn, expiry:null]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://192.168.215.190:3343] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connecting to /192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connection established 192.168.214.140:57793<->192.168.215.190:3343
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Executing request POST /csvn/api/1/user?format=json HTTP/1.1
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.headers - http-outgoing-0 >> POST /csvn/api/1/user?format=json HTTP/1.1
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Content-Length: 180
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Host: 192.168.215.190:3343
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.4 (java 1.5)
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "POST /csvn/api/1/user?format=json HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Content-Length: 180[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Host: 192.168.215.190:3343[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.3.4 (java 1.5)[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "username=liyanjun&password=liyanjun&passwordConfirm=liyanjun&realUserName=%E6%9D%8E%E7%84%B1%E5%86%9B&email=123%40qq.com&description=%E6%B5%8B%E8%AF%95&_authorities=authorities%3A2"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 401 Full authentication is required to access this resource[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Date: Thu, 06 Jul 2017 04:33:48 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Set-Cookie: SESSID=cyrcqo1kpa6d1pzwxa3hekt5h;Path=/csvn;HttpOnly[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Type: text/html;charset=ISO-8859-1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Cache-Control: must-revalidate,no-cache,no-store[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Length: 1472[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<html>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<title>Error 401 Full authentication is required to access this resource</title>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<body><h2>HTTP ERROR 401</h2>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<p>Problem accessing /csvn/api/1/user. Reason:[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<pre>    Full authentication is required to access this resource</pre></p><hr /><i><small>Powered by Jetty://</small></i><br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</body>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</html>[\n]"
+DEBUG main org.apache.http.headers - http-outgoing-0 << HTTP/1.1 401 Full authentication is required to access this resource
+DEBUG main org.apache.http.headers - http-outgoing-0 << Date: Thu, 06 Jul 2017 04:33:48 GMT
+DEBUG main org.apache.http.headers - http-outgoing-0 << Set-Cookie: SESSID=cyrcqo1kpa6d1pzwxa3hekt5h;Path=/csvn;HttpOnly
+DEBUG main org.apache.http.headers - http-outgoing-0 << WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Type: text/html;charset=ISO-8859-1
+DEBUG main org.apache.http.headers - http-outgoing-0 << Cache-Control: must-revalidate,no-cache,no-store
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Length: 1472
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - Authentication required
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - 192.168.215.190:3343 requested authentication
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Authentication schemes in the order of preference: [negotiate, Kerberos, NTLM, Digest, Basic]
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for negotiate authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Kerberos authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for NTLM authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Digest authentication scheme not available
+DEBUG main org.apache.http.client.protocol.ResponseProcessCookies - Cookie accepted [SESSID="cyrcqo1kpa6d1pzwxa3hekt5h", version:0, domain:192.168.215.190, path:/csvn, expiry:null]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://192.168.215.190:3343] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connecting to /192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connection established 192.168.214.140:60154<->192.168.215.190:3343
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Executing request POST /csvn/api/1/user?format=json HTTP/1.1
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.headers - http-outgoing-0 >> POST /csvn/api/1/user?format=json HTTP/1.1
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Content-Length: 98
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Host: 192.168.215.190:3343
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.4 (java 1.5)
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "POST /csvn/api/1/user?format=json HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Content-Length: 98[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Host: 192.168.215.190:3343[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.3.4 (java 1.5)[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "username=liyanjun&password=liyanjun&fullName=%E6%9D%8E%E7%84%B1%E5%86%9B&emailAddress=123%40qq.com"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 401 Full authentication is required to access this resource[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Date: Thu, 06 Jul 2017 05:03:16 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Set-Cookie: SESSID=xzohnz9mcaqnt4hemp21okk0;Path=/csvn;HttpOnly[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Type: text/html;charset=ISO-8859-1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Cache-Control: must-revalidate,no-cache,no-store[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Length: 1472[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<html>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<title>Error 401 Full authentication is required to access this resource</title>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<body><h2>HTTP ERROR 401</h2>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<p>Problem accessing /csvn/api/1/user. Reason:[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<pre>    Full authentication is required to access this resource</pre></p><hr /><i><small>Powered by Jetty://</small></i><br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</body>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</html>[\n]"
+DEBUG main org.apache.http.headers - http-outgoing-0 << HTTP/1.1 401 Full authentication is required to access this resource
+DEBUG main org.apache.http.headers - http-outgoing-0 << Date: Thu, 06 Jul 2017 05:03:16 GMT
+DEBUG main org.apache.http.headers - http-outgoing-0 << Set-Cookie: SESSID=xzohnz9mcaqnt4hemp21okk0;Path=/csvn;HttpOnly
+DEBUG main org.apache.http.headers - http-outgoing-0 << WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Type: text/html;charset=ISO-8859-1
+DEBUG main org.apache.http.headers - http-outgoing-0 << Cache-Control: must-revalidate,no-cache,no-store
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Length: 1472
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - Authentication required
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - 192.168.215.190:3343 requested authentication
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Authentication schemes in the order of preference: [negotiate, Kerberos, NTLM, Digest, Basic]
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for negotiate authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Kerberos authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for NTLM authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Digest authentication scheme not available
+DEBUG main org.apache.http.client.protocol.ResponseProcessCookies - Cookie accepted [SESSID="xzohnz9mcaqnt4hemp21okk0", version:0, domain:192.168.215.190, path:/csvn, expiry:null]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://192.168.215.190:3343] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connecting to /192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connection established 192.168.214.140:60208<->192.168.215.190:3343
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Executing request POST /csvn/api/1/user?format=json HTTP/1.1
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.headers - http-outgoing-0 >> POST /csvn/api/1/user?format=json HTTP/1.1
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Content-Length: 98
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Host: 192.168.215.190:3343
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.4 (java 1.5)
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "POST /csvn/api/1/user?format=json HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Content-Length: 98[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Host: 192.168.215.190:3343[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.3.4 (java 1.5)[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "username=liyanjun&password=liyanjun&fullName=%E6%9D%8E%E7%84%B1%E5%86%9B&emailAddress=123%40qq.com"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 401 Full authentication is required to access this resource[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Date: Thu, 06 Jul 2017 05:05:06 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Set-Cookie: SESSID=h6bg8kfy0kkd11ig4qs0pjf0h;Path=/csvn;HttpOnly[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Type: text/html;charset=ISO-8859-1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Cache-Control: must-revalidate,no-cache,no-store[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Length: 1472[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<html>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<title>Error 401 Full authentication is required to access this resource</title>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<body><h2>HTTP ERROR 401</h2>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<p>Problem accessing /csvn/api/1/user. Reason:[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<pre>    Full authentication is required to access this resource</pre></p><hr /><i><small>Powered by Jetty://</small></i><br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</body>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</html>[\n]"
+DEBUG main org.apache.http.headers - http-outgoing-0 << HTTP/1.1 401 Full authentication is required to access this resource
+DEBUG main org.apache.http.headers - http-outgoing-0 << Date: Thu, 06 Jul 2017 05:05:06 GMT
+DEBUG main org.apache.http.headers - http-outgoing-0 << Set-Cookie: SESSID=h6bg8kfy0kkd11ig4qs0pjf0h;Path=/csvn;HttpOnly
+DEBUG main org.apache.http.headers - http-outgoing-0 << WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Type: text/html;charset=ISO-8859-1
+DEBUG main org.apache.http.headers - http-outgoing-0 << Cache-Control: must-revalidate,no-cache,no-store
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Length: 1472
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - Authentication required
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - 192.168.215.190:3343 requested authentication
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Authentication schemes in the order of preference: [negotiate, Kerberos, NTLM, Digest, Basic]
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for negotiate authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Kerberos authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for NTLM authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Digest authentication scheme not available
+DEBUG main org.apache.http.client.protocol.ResponseProcessCookies - Cookie accepted [SESSID="h6bg8kfy0kkd11ig4qs0pjf0h", version:0, domain:192.168.215.190, path:/csvn, expiry:null]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://192.168.215.190:3343] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connecting to /192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connection established 192.168.214.140:57428<->192.168.215.190:3343
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Executing request GET /csvn/api/1/user?format=json HTTP/1.1
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.headers - http-outgoing-0 >> GET /csvn/api/1/user?format=json HTTP/1.1
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Host: 192.168.215.190:3343
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5)
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "GET /csvn/api/1/user?format=json HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Host: 192.168.215.190:3343[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 401 Full authentication is required to access this resource[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Date: Thu, 06 Jul 2017 09:36:06 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Set-Cookie: SESSID=hmjyfkjsrow11tfvzevfyawcl;Path=/csvn;HttpOnly[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Type: text/html;charset=ISO-8859-1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Cache-Control: must-revalidate,no-cache,no-store[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Length: 1472[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<html>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<title>Error 401 Full authentication is required to access this resource</title>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<body><h2>HTTP ERROR 401</h2>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<p>Problem accessing /csvn/api/1/user. Reason:[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<pre>    Full authentication is required to access this resource</pre></p><hr /><i><small>Powered by Jetty://</small></i><br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</body>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</html>[\n]"
+DEBUG main org.apache.http.headers - http-outgoing-0 << HTTP/1.1 401 Full authentication is required to access this resource
+DEBUG main org.apache.http.headers - http-outgoing-0 << Date: Thu, 06 Jul 2017 09:36:06 GMT
+DEBUG main org.apache.http.headers - http-outgoing-0 << Set-Cookie: SESSID=hmjyfkjsrow11tfvzevfyawcl;Path=/csvn;HttpOnly
+DEBUG main org.apache.http.headers - http-outgoing-0 << WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Type: text/html;charset=ISO-8859-1
+DEBUG main org.apache.http.headers - http-outgoing-0 << Cache-Control: must-revalidate,no-cache,no-store
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Length: 1472
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - Authentication required
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - 192.168.215.190:3343 requested authentication
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Authentication schemes in the order of preference: [negotiate, Kerberos, NTLM, Digest, Basic]
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for negotiate authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Kerberos authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for NTLM authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Digest authentication scheme not available
+DEBUG main org.apache.http.client.protocol.ResponseProcessCookies - Cookie accepted [SESSID="hmjyfkjsrow11tfvzevfyawcl", version:0, domain:192.168.215.190, path:/csvn, expiry:null]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://192.168.215.190:3343] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connecting to /192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connection established 192.168.214.140:57855<->192.168.215.190:3343
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Executing request GET /csvn/api/1/role?format=js HTTP/1.1
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.headers - http-outgoing-0 >> GET /csvn/api/1/role?format=js HTTP/1.1
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Host: 192.168.215.190:3343
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5)
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "GET /csvn/api/1/role?format=js HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Host: 192.168.215.190:3343[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 401 Full authentication is required to access this resource[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Date: Thu, 06 Jul 2017 09:49:37 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Set-Cookie: SESSID=59hew7vv81z11gcdt387y5w88;Path=/csvn;HttpOnly[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Type: text/html;charset=ISO-8859-1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Cache-Control: must-revalidate,no-cache,no-store[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Length: 1472[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<html>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<title>Error 401 Full authentication is required to access this resource</title>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<body><h2>HTTP ERROR 401</h2>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<p>Problem accessing /csvn/api/1/role. Reason:[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<pre>    Full authentication is required to access this resource</pre></p><hr /><i><small>Powered by Jetty://</small></i><br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</body>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</html>[\n]"
+DEBUG main org.apache.http.headers - http-outgoing-0 << HTTP/1.1 401 Full authentication is required to access this resource
+DEBUG main org.apache.http.headers - http-outgoing-0 << Date: Thu, 06 Jul 2017 09:49:37 GMT
+DEBUG main org.apache.http.headers - http-outgoing-0 << Set-Cookie: SESSID=59hew7vv81z11gcdt387y5w88;Path=/csvn;HttpOnly
+DEBUG main org.apache.http.headers - http-outgoing-0 << WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Type: text/html;charset=ISO-8859-1
+DEBUG main org.apache.http.headers - http-outgoing-0 << Cache-Control: must-revalidate,no-cache,no-store
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Length: 1472
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - Authentication required
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - 192.168.215.190:3343 requested authentication
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Authentication schemes in the order of preference: [negotiate, Kerberos, NTLM, Digest, Basic]
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for negotiate authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Kerberos authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for NTLM authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Digest authentication scheme not available
+DEBUG main org.apache.http.client.protocol.ResponseProcessCookies - Cookie accepted [SESSID="59hew7vv81z11gcdt387y5w88", version:0, domain:192.168.215.190, path:/csvn, expiry:null]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://192.168.215.190:3343] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connecting to /192.168.215.190:3343
+DEBUG main org.apache.http.impl.conn.HttpClientConnectionOperator - Connection established 192.168.214.140:58215<->192.168.215.190:3343
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Executing request GET /csvn/api/1/role?format=js HTTP/1.1
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.headers - http-outgoing-0 >> GET /csvn/api/1/role?format=js HTTP/1.1
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Host: 192.168.215.190:3343
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5)
+DEBUG main org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "GET /csvn/api/1/role?format=js HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Host: 192.168.215.190:3343[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 401 Full authentication is required to access this resource[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Date: Thu, 06 Jul 2017 10:04:08 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Set-Cookie: SESSID=1wvgddeq3haeg4lodcfdbd5d8;Path=/csvn;HttpOnly[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Type: text/html;charset=ISO-8859-1[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Cache-Control: must-revalidate,no-cache,no-store[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "Content-Length: 1472[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<html>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<title>Error 401 Full authentication is required to access this resource</title>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</head>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<body><h2>HTTP ERROR 401</h2>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<p>Problem accessing /csvn/api/1/role. Reason:[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<pre>    Full authentication is required to access this resource</pre></p><hr /><i><small>Powered by Jetty://</small></i><br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "<br/>                                                [\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</body>[\n]"
+DEBUG main org.apache.http.wire - http-outgoing-0 << "</html>[\n]"
+DEBUG main org.apache.http.headers - http-outgoing-0 << HTTP/1.1 401 Full authentication is required to access this resource
+DEBUG main org.apache.http.headers - http-outgoing-0 << Date: Thu, 06 Jul 2017 10:04:08 GMT
+DEBUG main org.apache.http.headers - http-outgoing-0 << Set-Cookie: SESSID=1wvgddeq3haeg4lodcfdbd5d8;Path=/csvn;HttpOnly
+DEBUG main org.apache.http.headers - http-outgoing-0 << WWW-Authenticate: Basic realm="CollabNet Subversion Edge Console"
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Type: text/html;charset=ISO-8859-1
+DEBUG main org.apache.http.headers - http-outgoing-0 << Cache-Control: must-revalidate,no-cache,no-store
+DEBUG main org.apache.http.headers - http-outgoing-0 << Content-Length: 1472
+DEBUG main org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - Authentication required
+DEBUG main org.apache.http.impl.auth.HttpAuthenticator - 192.168.215.190:3343 requested authentication
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Authentication schemes in the order of preference: [negotiate, Kerberos, NTLM, Digest, Basic]
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for negotiate authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Kerberos authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for NTLM authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Digest authentication scheme not available
+DEBUG main org.apache.http.client.protocol.ResponseProcessCookies - Cookie accepted [SESSID="1wvgddeq3haeg4lodcfdbd5d8", version:0, domain:192.168.215.190, path:/csvn, expiry:null]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://192.168.215.190:3343] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://192.168.215.190:3343][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+DEBUG main org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down

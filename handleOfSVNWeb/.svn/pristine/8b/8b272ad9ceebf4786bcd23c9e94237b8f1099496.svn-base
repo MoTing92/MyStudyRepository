@@ -1,0 +1,28 @@
+package com.svn.action;
+
+import javax.annotation.Resource;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import com.svn.service.ISvnService;
+
+@Controller
+@RequestMapping("/svn")
+public class SvnAction {
+
+	@Resource
+	private ISvnService svnService;
+	
+	@RequestMapping("/listRepository")
+	public String listRepository(String httpPath) throws Exception{
+		svnService.listRepository(httpPath);
+		return null;
+	}
+	
+	@RequestMapping("/init")
+	public String init(){
+		
+		return "forward:/repos/addRepos.jsp";
+	}
+	
+	
+}

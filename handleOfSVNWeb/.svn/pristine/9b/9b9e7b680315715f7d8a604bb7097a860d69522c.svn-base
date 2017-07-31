@@ -1,0 +1,8 @@
+package com.svn.service;
+
+import com.svn.model.RepositoryMsgResponse;
+
+public interface ISvnService {
+
+	public RepositoryMsgResponse listRepository(String httpPath);
+}

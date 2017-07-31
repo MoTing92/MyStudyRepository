@@ -96,11 +96,14 @@ public class UserService implements IUserService {
 	 * **/
 	@Override
 	public boolean update(User user) {
+<<<<<<< HEAD
 		//md5加密
 		String pwd = Encrypt.md5(user.getPassword(), Constant.PASS);
 		//set
 		user.setPassword(pwd);
 		//修改
+=======
+>>>>>>> myDevelop
 		userDao.updateByPrimaryKeySelective(user);
 		return true;
 	}

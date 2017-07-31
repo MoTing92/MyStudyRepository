@@ -6,12 +6,19 @@ import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+<<<<<<< HEAD
+=======
+import javax.servlet.http.HttpServletResponse;
+>>>>>>> myDevelop
 
 import org.springframework.stereotype.Service;
 
 import com.cmsz.bean.ApplyMsg;
 import com.cmsz.bean.OwnGroup;
+<<<<<<< HEAD
 import com.cmsz.bean.PathBean;
+=======
+>>>>>>> myDevelop
 import com.cmsz.bean.RequestMsg;
 import com.cmsz.bean.ReturnMsg;
 import com.cmsz.bean.User;
@@ -290,7 +297,10 @@ public class ApplyMsgService implements IApplyMsgService {
 		apply.setWorkDuty(user.getWorkDuty());
 		apply.setFourA(user.getFourA());
 		apply.setEmail(user.getEmail());
+<<<<<<< HEAD
 		ExportExcel.exportExcelTo("D:", apply);
+=======
+>>>>>>> myDevelop
 		return apply;
 	}
 
@@ -303,6 +313,7 @@ public class ApplyMsgService implements IApplyMsgService {
 	}
 
 	@Override
+<<<<<<< HEAD
 	public boolean exportApply(PathBean path) {
 		try {
 			ApplyMsg apply = applyDao.look(path.getId());
@@ -311,6 +322,14 @@ public class ApplyMsgService implements IApplyMsgService {
 		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
+=======
+	public void exportApply(int id,HttpServletResponse response) {
+		try {
+			ApplyMsg apply = applyDao.look(id);
+			ExportExcel.exportExcel(apply,response);
+		} catch (Exception e) {
+			e.printStackTrace();
+>>>>>>> myDevelop
 		}
 	}
 

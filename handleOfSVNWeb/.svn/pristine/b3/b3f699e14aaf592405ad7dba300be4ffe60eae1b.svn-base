@@ -1,0 +1,25 @@
+package com.svn.service.impl;
+
+import org.springframework.stereotype.Service;
+import com.svn.Example;
+import com.svn.model.RepositoryMsgResponse;
+import com.svn.service.ISvnService;
+
+@Service
+public class SvnServiceImpl implements ISvnService{
+
+	private Example ex = new Example();
+	
+	@Override
+	public RepositoryMsgResponse listRepository(String httpPath) {
+//		svn.listRepository(httpPath);
+		try {
+			ex.listRepository();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

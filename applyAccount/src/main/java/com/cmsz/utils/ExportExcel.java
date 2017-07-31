@@ -1,10 +1,20 @@
 package com.cmsz.utils;
 
+<<<<<<< HEAD
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
+=======
+import java.io.OutputStream;
+import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import javax.servlet.http.HttpServletResponse;
+>>>>>>> myDevelop
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
@@ -12,7 +22,10 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.util.CellRangeAddress;
+<<<<<<< HEAD
 
+=======
+>>>>>>> myDevelop
 import com.cmsz.bean.ApplyMsg;
 import com.cmsz.bean.RemarkBean;
 import com.cmsz.service.IApplyMsgService;
@@ -20,7 +33,11 @@ import com.cmsz.service.impl.ApplyMsgService;
 
 public class ExportExcel {
 
+<<<<<<< HEAD
 	public static void exportExcelTo(String path,ApplyMsg apply){
+=======
+	public static void exportExcel(ApplyMsg apply,HttpServletResponse response){
+>>>>>>> myDevelop
 		
 		// 第一步，创建一个webbook（工作簿），对应一个Excel文件  
         @SuppressWarnings("resource")
@@ -69,12 +86,15 @@ public class ExportExcel {
         sheet.setDefaultColumnStyle(3, style5);
         sheet.setDefaultColumnStyle(4, style5);
         sheet.setDefaultColumnStyle(5, style5);
+<<<<<<< HEAD
 //        sheet.autoSizeColumn(0);
 //        sheet.autoSizeColumn(1);
 //        sheet.autoSizeColumn(2);
 //        sheet.autoSizeColumn(3);
 //        sheet.autoSizeColumn(4);
 //        sheet.autoSizeColumn(5);
+=======
+>>>>>>> myDevelop
 
         //合并单元格
         CellRangeAddress region1 = new CellRangeAddress(0, 0, 0, 5);
@@ -273,7 +293,11 @@ public class ExportExcel {
         
         HSSFRow row17 = sheet.createRow(16);
         HSSFCell cell_17_1 = row17.createCell(0);
+<<<<<<< HEAD
         cell_17_1.setCellValue("业务使用部门主管意见");
+=======
+        cell_17_1.setCellValue("部门主管意见");
+>>>>>>> myDevelop
         HSSFCell cell_17_2 = row17.createCell(1);
         HSSFCell cell_17_3 = row17.createCell(2);
         cell_17_3.setCellValue("签名");
@@ -289,7 +313,11 @@ public class ExportExcel {
         
         HSSFRow row18 = sheet.createRow(17);
         HSSFCell cell_18_1 = row18.createCell(0);
+<<<<<<< HEAD
         cell_18_1.setCellValue("业务使用部门主管意见");
+=======
+        cell_18_1.setCellValue("配置管理员意见");
+>>>>>>> myDevelop
         HSSFCell cell_18_2 = row18.createCell(1);
         HSSFCell cell_18_3 = row18.createCell(2);
         cell_18_3.setCellValue("签名");
@@ -310,11 +338,24 @@ public class ExportExcel {
         cell_19_1.setCellValue(Constant.SHUOMING);
         
         // 第五步，将文件存到指定位置  
+<<<<<<< HEAD
         try  
         {  
             FileOutputStream fout = new FileOutputStream(path+"/students2.xls");  
             wb.write(fout);  
             fout.close();  
+=======
+        OutputStream out = null;
+        try{  
+        	out = response.getOutputStream();
+        	SimpleDateFormat fms = new SimpleDateFormat("yyyyMMdd");
+        	Date date = new Date();
+            String fileName = apply.getUsername()+"账户开户申请表"+fms.format(date)+".xls";// 文件名  
+            response.setContentType("application/x-msdownload");  
+            response.setHeader("Content-Disposition", "attachment; filename="  
+                                                    + URLEncoder.encode(fileName, "UTF-8"));  
+            wb.write(out);  
+>>>>>>> myDevelop
         }  
         catch (Exception e)  
         {  
@@ -323,9 +364,19 @@ public class ExportExcel {
     }
 	
 	public static void main(String[] args) {
+<<<<<<< HEAD
 		IApplyMsgService applyService = new ApplyMsgService();
 		ApplyMsg apply = applyService.look(83);
 		exportExcelTo("D:", apply);
 		System.out.println("!!!!!!!!");
+=======
+		System.out.println("!!!!!!!!");
+	}
+
+	public void test(int id,HttpServletResponse response){
+		IApplyMsgService applyService = new ApplyMsgService();
+		ApplyMsg apply = applyService.look(83);
+		exportExcel(apply,response);
+>>>>>>> myDevelop
 	}
 }
