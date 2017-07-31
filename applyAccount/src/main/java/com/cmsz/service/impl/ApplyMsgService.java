@@ -6,12 +6,12 @@ import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Service;
 
 import com.cmsz.bean.ApplyMsg;
 import com.cmsz.bean.OwnGroup;
-import com.cmsz.bean.PathBean;
 import com.cmsz.bean.RequestMsg;
 import com.cmsz.bean.ReturnMsg;
 import com.cmsz.bean.User;
@@ -290,7 +290,6 @@ public class ApplyMsgService implements IApplyMsgService {
 		apply.setWorkDuty(user.getWorkDuty());
 		apply.setFourA(user.getFourA());
 		apply.setEmail(user.getEmail());
-		ExportExcel.exportExcelTo("D:", apply);
 		return apply;
 	}
 
@@ -303,14 +302,12 @@ public class ApplyMsgService implements IApplyMsgService {
 	}
 
 	@Override
-	public boolean exportApply(PathBean path) {
+	public void exportApply(int id,HttpServletResponse response) {
 		try {
-			ApplyMsg apply = applyDao.look(path.getId());
-			ExportExcel.exportExcelTo(path.getExportPath(), apply);
-			return true;
+			ApplyMsg apply = applyDao.look(id);
+			ExportExcel.exportExcel(apply,response);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return false;
 		}
 	}
 

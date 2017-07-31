@@ -1,10 +1,12 @@
 package com.cmsz.utils;
 
-import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
+import javax.servlet.http.HttpServletResponse;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
@@ -12,7 +14,6 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.util.CellRangeAddress;
-
 import com.cmsz.bean.ApplyMsg;
 import com.cmsz.bean.RemarkBean;
 import com.cmsz.service.IApplyMsgService;
@@ -20,7 +21,7 @@ import com.cmsz.service.impl.ApplyMsgService;
 
 public class ExportExcel {
 
-	public static void exportExcelTo(String path,ApplyMsg apply){
+	public static void exportExcel(ApplyMsg apply,HttpServletResponse response){
 		
 		// 第一步，创建一个webbook（工作簿），对应一个Excel文件  
         @SuppressWarnings("resource")
@@ -304,11 +305,16 @@ public class ExportExcel {
         cell_19_1.setCellValue(Constant.SHUOMING);
         
         // 第五步，将文件存到指定位置  
-        try  
-        {  
-            FileOutputStream fout = new FileOutputStream(path+"/students2.xls");  
-            wb.write(fout);  
-            fout.close();  
+        OutputStream out = null;
+        try{  
+        	out = response.getOutputStream();
+        	SimpleDateFormat fms = new SimpleDateFormat("yyyyMMdd");
+        	Date date = new Date();
+            String fileName = apply.getUsername()+"账户开户申请表"+fms.format(date)+".xls";// 文件名  
+            response.setContentType("application/x-msdownload");  
+            response.setHeader("Content-Disposition", "attachment; filename="  
+                                                    + URLEncoder.encode(fileName, "UTF-8"));  
+            wb.write(out);  
         }  
         catch (Exception e)  
         {  
@@ -317,9 +323,12 @@ public class ExportExcel {
     }
 	
 	public static void main(String[] args) {
+		System.out.println("!!!!!!!!");
+	}
+
+	public void test(int id,HttpServletResponse response){
 		IApplyMsgService applyService = new ApplyMsgService();
 		ApplyMsg apply = applyService.look(83);
-		exportExcelTo("D:", apply);
-		System.out.println("!!!!!!!!");
+		exportExcel(apply,response);
 	}
 }
