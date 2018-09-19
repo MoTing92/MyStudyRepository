@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>发送邮件</title>
+<style type="text/css">
+.paper{
+	width: 595px;
+	height: 842px;
+	background-color: #ffffff;
+	/* padding-top: 60px;
+	margin: 55px auto; */
+}
+.paper .labelDiv {
+	margin-top: 20px;
+	margin-left: 60px;
+}
+.paper .labelDiv label{
+	display: inline-block;
+	width: 60px;
+	margin-right: 10px;
+	text-align: right;
+	font-size: 14px;
+	color: #2f3033;
+}
+.paper .labelDiv input{
+	width: 284px;
+	height: 30px;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 2px;
+	border: solid 1px #d3d5db;
+}
+.text{
+	width: 364px;
+    margin-left: 74px;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #2f3033;
+    line-height: 26px;
+}
+.explain{
+	width: 450px;
+	margin-left:68px;
+	margin-top: 40px;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 26px;
+	letter-spacing: 0px;
+	color: #2f3033;
+}
+.settlmentSlip p{
+	width: 384px;
+	margin: 20px auto;
+	font-size: 22px;
+	color: #2f3033;
+}
+.settlmentSlip table {
+	width: 458px;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+.settlmentSlip table tr:first-child{
+	background-color: #f6faff;
+}
+.settlmentSlip table tr td{
+	padding: 10px 0;
+	text-align: center;
+	border: solid 1px #9ecdfd;
+	font-size: 14px;
+	color: #2f3033;
+}
+</style>
+</head>
+<body>
+ <div class="paper">
+	    	<div class="labelDiv">
+               <label>收件人</label><input placeholder="联系人联系邮箱" id="recipienEmail"/>
+	    	</div>
+	    	<div class="labelDiv">
+               <label>抄送</label><input placeholder="法人联系邮箱" id="ccEmail"/>
+	    	</div>
+	    	<div class="text">
+	    		<p><span class="channelCode"></span></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;你好，才下为贵司XX年XX月的话费分成佣金，请确认。</p>
+                <p>结算明细如下：</p>
+	    	</div>
+	    	 	<div class="settlmentSlip">
+		    		<p><span class="channelCode"></span><span class="month"></span>月结算单</p>
+		    		<table>
+	    			<tr>
+	    				<td>结算年月</td><td>渠道商</td><td>结算金额</td><td>备注</td>
+	    			</tr>
+	    			<tr>
+	    				<td class="month"></td><td class="channelCode"></td><td class="totalAmount"></td><td></td>
+	    			</tr>
+	    			<tr>
+	    				<td>总计</td><td></td><td class="totalAmount"></td><td></td>
+	    			</tr>
+	    		</table>
+		    	</div>
+		    	<div class="explain">
+		    		<p>说明：</p>
+		    		<p>请贵司于3个工作日内回复确认邮件，三个工作日内未收到回复邮件，则视为贵司认可该结算。</p>
+		    		<p>如贵司对结算数据有疑议，请于3个工作日内回复邮件与我司进行对账。</p>
+		    		<p>邮件请回复至邮箱：XXX@yyu.com</p>
+		    		<p>联系人：aaa</p>
+                    <p>联系电话：13799982828</p>
+		    	</div>
+		    </div> 
+</body>
+</html>

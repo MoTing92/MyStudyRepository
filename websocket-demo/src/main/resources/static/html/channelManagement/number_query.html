@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<title>卡号资源查询</title>
+		 <link rel="shortcut icon" href="http://www.10086.cn/favicon.ico"  type="images/x-icon">
+		<link rel="stylesheet" href="../../css/common/bootstrap.css" />
+		<link rel="stylesheet" href="../../css/mycss/public.css" />
+		<link rel="stylesheet" href="../../css/mycss/card_number.css" />
+		<link rel="stylesheet" href="../../css/mycss/number_query.css" />
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<ul>
+				<li class="title">
+					<span class="f-size20">渠道管理系统</span>
+				</li>
+				<li><a id="businessShall" href="javascript:;">营业厅管理</a></li>
+				<li class="active"><a id="channel" href="javascript:;">渠道管理</a></li>
+				<p><span id="username" class="mr20 inblock"></span><a class="inblock mr40" id="account" href="javascript:;">账号配置</a><a href="" id="logout">登出&rsaquo;</a></p>
+			</ul>
+			<div class="clearfix"></div>
+		</div>
+		<!--左侧导航栏-->
+		<div class="channelContent">
+			<ul>
+			<li><a href="../channelManagement/resource_allocation.html"><i class="img1"></i><span>渠道资源配置</span></a></li>
+			<li><a href="../channelManagement/resources_order.html"><i class="img2"></i><span>资源订单管理</span></a></li>
+			<li><a href="../channelManagement/pretty_number.html"><i class="img3"></i><span>靓号规则管理</span></a></li>
+			<li><a href="../channelManagement/card_number.html"><i class="img4"></i><span>卡号资源渠道管理</span></a></li>
+			<li class="active"><a href="javascript:;"><i class="img5"></i><span>卡号资源查询</span></a></li>
+			<li><a href="../channelManagement/commissions.html"><i class="img6"></i><span>佣金管理</span></a></li>
+			</ul>
+		</div>
+		<!--右边-->
+	    <div class="rightContent">
+	    	<!--号码入库信息查询-->
+	    	<div class="inventory">
+	    		<p>号码入库信息查询</p>
+	    		<div class="inputDiv mb20">
+	    			<label>号段</label>
+	    			<input type="number" id="hlr"/>
+	    			<label>入库时间</label><input type="text" id="startDate"/><span>起至</span><input type="text" id="endDate"/><span>止</span>
+	    			
+	    		</div>
+	    		<div class="inputDiv mb20">
+	    			<label>靓号模式</label>
+	    				<select id="goodRule">
+	    				<option value="">请选择</option>
+						<option value="AAAAAAAA">八条（AAAAAAAA）</option>
+						<option  value="AAAAAAA">七条（AAAAAAA）</option>
+						<option  value="AAAAAA">六条（AAAAAA）</option>
+						<option  value="AAAAA">五条（AAAAA）</option>
+						<option  value="AAAA">四条（AAAA）</option>
+						<option  value="AAA">三条（AAA）</option>
+						<option  value="ABCD">ABCD</option>
+						<option  value="大循环">大循环</option>
+						<option  value="AAAAAB">AAAAAB</option>
+						<option  value="AAAAB">AAAAB</option>
+						<option  value="ABCABC">ABCABC</option>
+						<option  value="ABABAB">ABABAB</option>
+						<option  value="AAABB">AAABB</option>
+						<option  value="AABB">AABB</option>
+						<option  value="AAAB">AAAB</option>
+						<option  value="ABAB">ABAB</option>
+						<option  value="DCBA">DCBA</option>
+						<option  value="ABC">ABC</option>
+					</select>
+	    			<label>状态</label>
+	    			<select id="state">
+	    			        <option value="">请选择</option>
+		    				<option value="1">可售</option>
+		    				<option value="5">已用</option>
+		    				<option value="3">预占</option>
+	    			</select>
+	    		</div>
+	    			<div class="inputDiv mb20 " id="numprovinces">
+	    			<label>归属省份</label>
+      	    		<select id="sheng">
+      	    			
+      	    		</select>
+      	    		<label>归属地市</label>
+      	    		<select id="shi">
+      	    			
+      	    		</select>
+	    			</div>
+	    			
+	    		<div class="buttonDiv">
+	    			<button class="researchButton" id="card_research">查询</button><button class="resetButton" id="card_reset">重置</button>
+	    		</div>
+	    	</div>
+	    	<!--号码库存查询结果-->
+	    	<div class="result">
+	    		<p>号码库存查询结果</p>
+	    		<div class="result_table"></div>
+	    		<div id="page" class="page_div floatr"></div>
+	    		 <div class="clearfix"></div>
+	    		<!-- <table>
+	    			<tr>
+	    				<td>号码</td><td>归属省份</td><td>归属地市</td><td>靓号模式</td><td>预存款</td><td>归属运营商</td><td>号码状态</td><td>入库时间</td><td>备注</td>
+	    			</tr>
+	    			<tr>
+	    				<td>13700019000</td><td>广东</td><td>深圳</td><td></td><td></td><td></td><td>已用</td><td>2018-1-29</td><td></td>
+	    			</tr>
+	    			<tr>
+	    				<td>13700019000</td><td>广东</td><td>深圳</td><td></td><td></td><td></td><td>已用</td><td>2018-1-29</td><td></td>
+	    			</tr>
+	    		</table> -->
+	    	</div>
+	    	
+	    	<!--SIM卡入库信息查询-->
+	    	<div class="inventory">
+	    		<p>SIM卡入库信息查询</p>
+	    		<div class="inputDiv mb20">
+	    			
+	    			<label>起始IMSI</label><input id="startImsi" type="text"/><span>起至</span><input id="endImsi" type="text"/><span>止</span>
+	    		    <label>归属号段</label><input id="resNumberHlr" type="number"/>
+	    		</div>
+	    			<div class="inputDiv mb20">
+	    			<label>入库时间</label><input type="text" id="startDate_SIM"/><span>起至</span><input type="text" id="endDate_SIM"/><span>止</span>
+	    			<label>状态</label>
+	    			<select id="manageStatus">
+	    			    <option value="">请选择</option>
+	    				<option value="1">可售</option>
+	    				<option value="5">已用</option>
+	    				<option value="3">预占</option>
+	    			</select>
+	    		</div>
+	    		<div class="inputDiv" id="provinces">
+	    			<label>归属省份</label>
+      	    		<select id="res_provCode">
+      	    			
+      	    		</select>
+      	    		<label>归属地市</label>
+      	    		<select id="res_areaCode">
+      	    			
+      	    		</select>
+	    		</div>
+	    		<div class="buttonDiv">
+	    			<button class="researchButton" id="sim_research">查询</button><button class="resetButton" id="sim_reset">重置</button>
+	    		</div>
+	    	</div>
+	    	<!--SIM卡库存查询结果-->
+	    	<div class="result">
+	    		<p>SIM卡库存查询结果</p>
+	    		<div class="sim_result"></div>
+	    		<div id="page1" class="page_div floatr"></div>
+	    		 <div class="clearfix"></div>
+	    		<!-- <table>
+	    			<tr>
+	    				<td>ICCID</td><td>归属省份</td><td>归属地市</td><td>IMSI</td><td>归属号段</td><td>SIM卡状态</td><td>入库时间</td><td>备注</td><td>操作</td>
+	    			</tr>
+	    			<tr>
+	    				<td>137000190001111</td><td>广东</td><td>深圳</td><td></td><td></td><td>可售</td><td>2018-1-29</td><td></td><td><span class="amend" onclick="showBg()">修改</span><span class="delete" onclick="showdbg()">删除</span></td>
+	    			</tr>
+	    			<tr>
+	    				<td>137000190001111</td><td>广东</td><td>深圳</td><td></td><td></td><td>已用</td><td>2018-1-29</td><td></td><td><span class="no_point mr10">修改</span><span class="no_point">删除</span></td>
+	    			</tr>
+	    		</table> -->
+	    	</div>
+	    </div>
+	     <!--弹窗-->
+       <!--遮罩层-->
+		<div id="fullbg"></div>
+		<div id="dialog">
+			<p>修改SIM卡</p>
+			<form>
+				<div class="formDiv">
+					<label>ICCID</label><input  id="amend_iccId" disabled="disabled"/>
+				</div>
+				<div class="tip none" id="amend_succ">已修改成功</div>
+				<div class="tip none" id="amend_fail">修改失败</div>
+				<div class="formDiv" id="province_amend">
+					<label>归属省份</label>
+					<select id="amend_provCode" class="mb20">
+	    				
+	    			</select>
+				<!-- </div>
+				<div class="formDiv"> -->
+					<label>归属地市</label>
+	    			<select id="amend_areaCode">
+	    				
+	    			</select>
+				</div>
+				<div class="formDiv">
+					<label>IMSI</label><input id="amend_imsi" disabled="disabled"/>
+				</div>
+				<div class="formDiv">
+					<label>归属号段</label><input id="amend_resNumberHlr"/>
+				</div>
+				<div class="formDiv">
+					<label>SIM卡状态</label>
+					<select id="amend_manageStatus">
+	    				<option value="">请选择</option>
+	    				<option value="1">可售</option>
+	    				<option value="0">已用</option>
+	    				<option value="0">预占</option>
+	    			</select>
+				</div>
+				<div class="formDiv">
+					<label>入库时间</label><input  type="text" id="amend_Date"/>
+				</div>
+				<!-- <div class="formDiv">
+					<label>备注</label><textarea></textarea>
+				</div> -->
+			</form>
+			<div class="btnDiv">
+				<button class="sure" id="amend_sim_sure">确认</button><button class="cancel"  onclick="closeBg()">取消</button>
+			</div>
+		</div>
+		  <div id="deleteDialog">
+	    	<p>提示</p>
+	    	<div class="text">删除后不可恢复，请谨慎操作。
+	    		<div class="tip none" id="delete_success">已成功删除</div><input type="hidden" id="delete_iccid">
+	    	    <div class="tip none" id="delete_fail">删除失败</div>
+	    	</div>
+	    	<div class="btnDiv">
+	    		<button class="sure" id="delete_sure">确认</button><button class="cancel" onclick="closeBg()">取消</button>
+	    	</div>
+	    </div>
+	</body>  
+	<script src="../../js/common/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="../../js/common/ajax.js" ></script>
+	<script type="text/javascript" src="../../js/common/paging.js"></script>
+	<!-- <script type="text/javascript" src="../../js/common/provinces.js" ></script> -->
+	<script type="text/javascript" src="../../js/common/provinces2.js" ></script>
+	<script type="text/javascript" src="../../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="../../js/channelManagement/number_query.js" ></script>
+		<script>
+		$(function(){
+			$("#numprovinces").distpicker("sheng","shi");
+			$("#provinces").distpicker("res_provCode","res_areaCode");
+			$("#province_amend").distpicker("amend_provCode","amend_areaCode");
+		})
+	</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>下载打印</title>
+<style type="text/css">
+.downloadPaper{
+	width: 595px;
+	height: 842px;
+	background-color: #ffffff;
+	/* padding-top: 60px;
+	margin: 55px auto; */
+}
+.settlmentSlip p{
+	width: 384px;
+	margin: 20px auto;
+	font-size: 22px;
+	color: #2f3033;
+}
+.settlmentSlip table {
+	width: 458px;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+.settlmentSlip table tr:first-child{
+	background-color: #f6faff;
+}
+.settlmentSlip table tr td{
+	padding: 10px 0;
+	text-align: center;
+	border: solid 1px #9ecdfd;
+	font-size: 14px;
+	color: #2f3033;
+}
+</style>
+</head>
+<body>
+<div class="downloadPaper">
+	    	<div class="settlmentSlip">
+	    		<p><span class="channelCode"></span><span class="month"></span>月结算单</p>
+	    		<table>
+	    			<tr>
+	    				<td>结算年月</td><td>渠道商</td><td>结算金额</td><td>备注</td>
+	    			</tr>
+	    			<tr>
+	    				<td class="month"></td><td class="channelCode"></td><td class="totalAmount"></td><td></td>
+	    			</tr>
+	    			<tr>
+	    				<td>总计</td><td></td><td class="totalAmount"></td><td></td>
+	    			</tr>
+	    		</table>
+	    	</div>
+	    	</div>
+</body>
+</html>

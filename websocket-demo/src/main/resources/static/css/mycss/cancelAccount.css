@@ -1,0 +1,87 @@
+.twoBtns {
+  margin-top: 44px;
+}
+/* 套餐变更 */
+.openinfo .queryInput table.costTab {
+  width: 100%;
+  margin-bottom: 43px;
+}
+.openinfo .queryInput table.costTab th {
+  height: 43px;
+  background-color: #F6FAFF;
+  border: 1px solid #9ECDFD;
+}
+.openinfo .queryInput table.costTab th.discount {
+  width: 40%;
+}
+.openinfo .queryInput table.costTab tr td {
+  height: 43px;
+  border: 1px solid #9ECDFD;
+  text-align: center;
+}
+/* 停复机 */
+#stopBtn {
+  width: 164px;
+  height: 50px;
+  background-color: #F6FAFF;
+  border: 1px solid #9ECDFD;
+  color: #9ECDFD;
+  border-radius: 4px;
+  font-size: 22px;
+  margin-right: 23px;
+}
+#complexBtn {
+  width: 164px;
+  height: 50px;
+  background-color: #F3FFE7;
+  border: 1px solid #96CA5E;
+  color: #96CA5E;
+  border-radius: 4px;
+  font-size: 22px;
+}
+/* 密码重置 */
+#resetPsdBtn {
+  width: 164px;
+  height: 50px;
+  background-color: #FFE9E9;
+  border: 1px solid #F28585;
+  color: #F28585;
+  border-radius: 4px;
+  font-size: 22px;
+}
+
+/* 充值缴费 */
+.openinfo .queryInput ul.amount li {
+  float: left;
+  width: 62px;
+  margin-right: 10px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #ECEDEE;
+  cursor: pointer;
+}
+.openinfo .queryInput ul.amount li.act {
+  background-color: #60A5F5;
+  color: #fff;
+}
+.openinfo .queryInput .otherAmount {
+  margin-left: 60px;
+  float: left;
+}
+.openinfo .queryInput .otherAmountTxt {
+  width: 180px;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+.openinfo .queryInput #startRechargeBtn {
+  width: 100px;
+  height: 30px;
+  border-radius: 4px;
+  margin-left: 40px;
+  border: 1px solid #F859CD;
+  color: #F859CD;
+  background-color: #FDECF8;
+}

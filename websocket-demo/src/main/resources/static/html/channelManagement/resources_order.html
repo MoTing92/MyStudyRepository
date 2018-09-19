@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<title>资源订单管理</title>
+		 <link rel="shortcut icon" href="http://www.10086.cn/favicon.ico"  type="images/x-icon">
+		<link rel="stylesheet" href="../../css/common/bootstrap.css" />
+		<link rel="stylesheet" href="../../css/mycss/public.css" />
+		<link rel="stylesheet" href="../../css/mycss/resources_order.css" />
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<ul>
+				<li class="title">
+					<span class="f-size20">渠道管理系统</span>
+				</li>
+				<li><a id="businessShall" href="javascript:;">营业厅管理</a></li>
+				<li class="active"><a id="channel" href="javascript:;">渠道管理</a></li>
+				<p><span id="username" class="mr20 inblock"></span><a class="inblock mr40" id="account" href="javascript:;">账号配置</a><a href="" id="logout">登出&rsaquo;</a></p>
+			</ul>
+			<div class="clearfix"></div>
+		</div>
+		<!--左侧导航栏-->
+		<div class="channelContent">
+			<ul>
+			<li><a href="../channelManagement/resource_allocation.html"><i class="img1"></i><span>渠道资源配置</span></a></li>
+			<li class="active"><a href="javascript:;"><i class="img2"></i><span>资源订单管理</span></a></li>
+			<li><a href="../channelManagement/pretty_number.html"><i class="img3"></i><span>靓号规则管理</span></a></li>
+			<li><a href="../channelManagement/card_number.html"><i class="img4"></i><span>卡号资源渠道管理</span></a></li>
+			<li><a href="../channelManagement/number_query.html"><i class="img5"></i><span>卡号资源查询</span></a></li>
+			<li><a href="../channelManagement/commissions.html"><i class="img6"></i><span>佣金管理</span></a></li>
+			</ul>
+		</div>
+		<!--右边-->
+		<div class="rightContent">
+              <!--订单生成-->
+              <div class="orderProduct">
+              	    <p class="open" onclick="show(this)">订单生成</p>
+              	    <div class="orderInput">
+              	    	<div class="inputDiv">
+              	    		<label>订单类型</label>
+              	    		<select id="orderType">
+              	    			<option value="1">申请资源</option>
+              	    			<!-- <option value="2">调拨资源</option> -->
+              	    			<option value="3">回收资源</option>
+              	    		</select>
+              	    		<label>渠道商编号</label><span id="tar_channelCode"></span>
+              	    		<label>归属号段</label><input type="number" id="hlr"/>
+              	    	</div>
+              	    	<div class="inputDiv">
+              	    	<label>订单标题</label><span id="orderTitle"></span>
+              	    	<label>号码数量</label><input type="number" id="number_quantity"/>
+              	    	<label>SIM卡数量</label><input type="number" id="sim_quantity"/>
+              	    	</div>
+              	    	<div class="inputDiv">
+              	    	 <label>订单编号</label><span id="orderNumber"></span>
+              	    	 <label>申请时间</label><span id="orderDate"></span>
+              	    	</div>
+              	    	<div class="inputDiv" id="orderprovince">
+              	    	    <label>归属省份</label>
+		      	    		<select id="sheng"></select>
+		      	    		<label>归属地市</label>
+		      	    		<select id="shi"></select>
+              	    	</div>	
+              	    	<div class="inputDiv recoveryDiv none">
+              	    	<label>起始号码</label><input placeholder="起始号码" type="number"  id="start_number"/>
+              	    	<label>结束号码</label><input placeholder="结束号码" type="number"  id="end_number"/>
+              	    	</div>
+              	    	<div class="inputDiv recoveryDiv none">
+              	    	<label>起始IMSI</label><input placeholder="起始IMSI" type="number"  id="start_imsi"/>
+              	    	<label>结束IMSI</label><input placeholder="结束IMSI" type="number"  id="end_imsi"/>
+              	    	</div>
+              	    	
+              	    	<div class="btnDiv">
+              	    		<button class="sure" id="orderProductalert">确认</button><button class="reset" id="orderProductReset">重置</button>
+              	    	</div>
+              	    </div>
+              </div>
+		      <!--待我处理-->
+		      <div class="pending">
+		      	<p class="open" onclick="show(this)">待我处理</p>
+		      	<div class="conDiv">
+		      	<!--  <div class="inputDiv">
+		      		<label>当前状态</label>
+		      		<select id="status">
+		      			<option>待审核</option>
+		      			<option>待处理</option>
+		      			<option>待调拨处理</option>
+		      			<option>待调拨</option>
+		      			<option>待确认</option>
+		      		</select>
+		      	</div>-->
+		      	<div class="pending_table mt30"></div>
+		      	<!-- <table>
+		      		<tr><td>订单编号</td><td>渠商道编号</td><td>申请时间</td><td>归属号段</td><td>归属省份</td><td>归属地市</td><td>申请SIM卡数量</td><td>申请号码数量</td><td>当前状态</td><td>当前处理人</td><td>操作</td></tr>
+		            <tr><td class="order_number">QD00320180426093754</td><td>XXX001</td><td>2018-01-23</td><td>137</td><td>广东</td><td>深圳</td><td>10</td><td>10</td><td>待审核</td><td>XXX001</td><td><span onclick="auditOpinion(this)">审核意见</span></td></tr>
+		            <tr><td class="order_number">QD00320180426093754</td><td>XXX001</td><td>2018-01-23</td><td>137</td><td>广东</td><td>深圳</td><td>10</td><td>10</td><td>待处理</td><td>XXX001</td><td><span onclick="orderManagement()">订单处理</span></td></tr>
+		            <tr><td class="order_number">QD00320180426093754</td><td>XXX001</td><td>2018-01-23</td><td>137</td><td>广东</td><td>深圳</td><td>10</td><td>10</td><td>待调拨处理</td><td>XXX001</td><td><span onclick="allocation()">调拨处理</span></td></tr>
+		            <tr><td class="order_number">QD00320180426093754</td><td>XXX001</td><td>2018-01-23</td><td>137</td><td>广东</td><td>深圳</td><td>10</td><td>10</td><td>待调拨</td><td>XXX001</td><td><span onclick="singleDial()">转调拨单</span></td></tr>
+		            <tr><td class="order_number">QD00320180426093754</td><td>XXX001</td><td>2018-01-23</td><td>137</td><td>广东</td><td>深圳</td><td>10</td><td>10</td><td>待确认</td><td>XXX001</td><td><span onclick="sureResult()">确认结果</span></td></tr>
+		      	</table> -->
+		      <!---分页-->
+		     <div id="page" class="page_div floatr"></div>
+		     <div class="clearfix"></div>
+			<!---分页结束-->
+		      	</div>
+		      </div>
+		      <!--订单查询-->
+		      <div class="order">
+		      	<p class="open" onclick="show(this)">订单查询</p>
+		      	<div class="inputdiv">
+		      			<!--<div class="labelDiv">
+		      	  <label>订单编号</label>
+		      		<select>
+		      			<option value="">请选择</option>
+		      			<option>XXX201801230001</option>
+		      			<option>XXX201801230001</option>
+		      			<option>XXX201801230001</option>
+		      		</select>
+		      		</div>-->
+		      		<div class="labelDiv">
+		      		<label>渠道商编号</label>
+		      		<input type="text" id="or_ini_channelCode"/>
+		      		<label>申请时间</label><input type="text" id="or_startDate" style="margin-right: 0;"/><span>起至</span><input type="text" id="or_endDate"/><span>止</span>
+		      		</div>
+		      		<div class="labelDiv" id="or_distpicker">
+		      		<label>归属号段</label>
+		      		<input type="number" id="or_hlr"/>
+		      		<label>归属省份</label>
+      	    		<select id="or_provCode">
+      	    			
+      	    		</select>
+      	    		<label>归属地市</label>
+      	    		<select id="or_areaCode">
+      	    			
+      	    		</select>
+		      		</div>
+		      	</div>
+		      	<div class="btnDiv">
+		      		<button class="research" id="order_research">查询</button><button class="reset" id="order_reset">重置</button>
+		      	</div>
+		      	<!--订单查询结果-->
+		      	<div class="orderResult">
+		      		<p>订单查询结果</p>
+		      		<div class="orderResult_table"></div>
+		      		  <!---分页-->
+					     <div id="page1" class="page_div floatr"></div>
+					     <div class="clearfix"></div>
+					 <!---分页结束-->
+		      		<!-- <table>
+		      		<tr><td>订单编号</td><td>渠商道编号</td><td>申请时间</td><td>归属号段</td><td>归属省份</td><td>归属地市</td><td>申请SIM卡数量</td><td>申请号码数量</td><td>当前状态</td><td>当前处理人</td><td>操作</td></tr>
+		            <tr><td>XXX201801230001</td><td>XXX001</td><td>2018-01-23</td><td>137</td><td>广东</td><td>深圳</td><td>10</td><td>10</td><td>审核中</td><td>XXX001</td><td><span onclick="withdraw()">取消申请</span></td></tr>
+		            <tr><td>XXX201801230001</td><td>XXX001</td><td>2018-01-23</td><td>137</td><td>广东</td><td>深圳</td><td>10</td><td>10</td><td>审核未通过</td><td>XXX001</td><td><span onclick="lookReason()">查看原因</span></td></tr>
+		            <tr><td>XXX201801230001</td><td>XXX001</td><td>2018-01-23</td><td>137</td><td>广东</td><td>深圳</td><td>10</td><td>10</td><td>审核成功</td><td>XXX001</td><td><span onclick="lookDetial()">查看详情</span><span class="revoke" onclick="revoke()">撤销</span></td></tr>
+		            <tr><td>XXX201801230001</td><td>XXX001</td><td>2018-01-23</td><td>137</td><td>广东</td><td>深圳</td><td>10</td><td>10</td><td>调拨成功</td><td>XXX001</td><td><span onclick="revokeallot()">撤销</span></td></tr>
+		            <tr><td>XXX201801230001</td><td>XXX001</td><td>2018-01-23</td><td>137</td><td>广东</td><td>深圳</td><td>10</td><td>10</td><td>调拨失败</td><td>XXX001</td><td><span onclick="lookcausation()">查看原因</span></td></tr>
+		      		</table> -->
+		      	</div>
+		      </div>
+		      <!--资源回收-->
+		  <!--     <div class=" resourcesRecovery order">
+		      	<p class="open" onclick="show(this)">资源回收</p>
+		      	<div class="inputdiv">
+		      		<div class="labelDiv">
+		      		<label style="width: 135px;">被回收渠道商编号</label>
+		      		<select>
+		      			<option>请选择</option>
+		      			<option>XXX201801230001</option>
+		      			<option>XXX201801230001</option>
+		      			<option>XXX201801230001</option>
+		      		</select>
+		      		<label>归属省份</label>
+      	    		<select>
+      	    			<option>请选择</option>
+      	    			<option>北京</option>
+      	    			<option>天津</option>
+      	    			<option>湖北</option>
+      	    			<option>湖南</option>
+      	    		</select>
+      	    		<label>归属地市</label>
+      	    		<select>
+      	    			<option>请选择</option>
+      	    			<option>广州</option>
+      	    			<option>深圳</option>
+      	    			<option>汕尾</option>
+      	    			<option>珠海</option>
+      	    		</select>
+		      		</div>
+		      		<div class="labelDiv">
+		      		<label>归属号段</label><input />
+		      		<label>回收号码</label><input placeholder="起始号码"/><span></span><input placeholder="结束号码"/>
+		      		</div>
+		      		<div class="labelDiv">
+		      		<label>回收SIM卡</label><input placeholder="起始IMSI"/><span></span><input placeholder="结束IMSI"/>
+		      		</div>
+		      	</div>
+		      	<div class="btnDiv">
+		      		<button class="research">查询</button><button class="reset">重置</button>
+		      	</div>
+		      	<!--资源查询结果
+		      	<div class="orderResult">
+		      		<p>资源查询结果</p>
+		      		<table>
+		      		<tr><td>归属号段</td><td>渠商道编号</td><td>归属地市</td><td>号码</td><td>IMSI</td><td>当前状态</td><td>操作</td></tr>
+		            <tr><td>137</td><td>XXX001</td><td>深圳</td><td></td><td></td><td></td><td><span onclick="recyclingResources()">回收资源</span></td></tr>
+		            <tr><td>137</td><td>XXX001</td><td>深圳</td><td></td><td></td><td></td><td><span>回收资源</span></td></tr>
+		            <tr><td>137</td><td>XXX001</td><td>深圳</td><td></td><td></td><td></td><td><span>回收资源</span></td></tr>
+		            <tr><td>137</td><td>XXX001</td><td>深圳</td><td></td><td></td><td></td><td><span>回收资源</span></td></tr>
+		            <tr><td>137</td><td>XXX001</td><td>深圳</td><td></td><td></td><td></td><td><span>回收资源</span></td></tr>
+		      		</table>
+		      	</div>
+		      </div>-->
+		</div>
+		<!--待我处理_调拨处理-->
+		<div id="allocation" class="alertDiv" style="display: none;">
+			<p class="alertTitle">调拨处理</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<label>订单编号</label><input />
+				</div>
+				<div class="labelDiv">	
+					<label>审核意见</label>
+					<select>
+						<option value="">请选择</option>
+						<option>通过</option>
+						<option>不通过</option>
+					</select>
+				</div>
+				<div class="labelDiv">
+					<label>不通过原因描述</label>
+					<textarea></textarea>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure">确认</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>
+		<!--待我处理_订单处理-->
+		<div id="orderManagement" class="alertDiv" style="display: none;">
+			  <p class="alertTitle">订单处理</p>
+			  <div class="alertInputDiv">
+				<div class="labelDiv">
+					<label>转入资源渠道商编码</label>
+					<input id="src_channelCode" type="text"/>
+				</div>
+				<!-- <div class="labelDiv">	
+					<label>申请渠道商编号</label>
+					<input />
+				</div> -->
+				<!-- <div class="labelDiv">	
+					<label>订单标题</label>
+					<input />
+				</div> -->
+				<div class="labelDiv">	
+					<label>订单编号</label>
+					<input type="text" id="src_orderId"/>
+				</div>
+				<div class="labelDiv">	
+					<label>起始号码</label>
+					<input type="number" id="src_start_number"/>
+				</div>
+				<div class="labelDiv">	
+					<label>结束号码</label>
+					<input type="number" id="src_end_number"/>
+				</div>
+				<div class="labelDiv">	
+					<label>起始imsi</label>
+					<input type="number" id="src_start_imsi"/>
+				</div>
+				<div class="labelDiv">	
+					<label>结束imsi</label>
+					<input type="number" id="src_end_imsi"/>
+				</div>
+				<div class="labelDiv">
+					<label>归属号段</label>
+					<input type="number" id="src_hlr"/>
+				</div>
+				<div class="labelDiv">	
+					<label>号码数量</label>
+					<input type="number" id="src_number_quantity"/>
+				</div>
+				<div class="labelDiv">	
+					<label>SIM卡数量</label>
+					<input type="number" id="src_sim_quantity"/>
+				</div>
+				<div class="labelDiv" id="src_distpicker">
+					<label>归属省份</label>
+      	    		<select id="src_provCode">
+      	    			
+      	    		</select>
+				</div>
+				<div class="labelDiv">
+					<label>归属地市</label>
+      	    		<select id="src_areaCode">
+      	    			
+      	    		</select>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure" id="src_sure">确认</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>
+		<!--待我处理_确认结果-->
+		<div id="sureResult" class="alertDiv" style="display: none;">
+			<p class="alertTitle">确认结果</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p>订单订购内容调拨完成，请确认是否异常：</p>
+				</div>
+				<!-- <div class="labelDiv">
+					<label>异常状态</label><input />
+				</div> -->
+				<div class="labelDiv">	
+					<label>异常描述</label>
+					<select id="Result_orderStatus">
+						<option value="0">正常</option>
+						<option value="2">异常</option>
+					</select>
+				</div>
+				<div class="labelDiv">
+					<label>不通过原因描述</label>
+					<textarea id="Result_reason"></textarea>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure" id="Result_sure">确认</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div> 
+		</div>
+		<!--待我处理_审核意见-->
+		<div id="auditOpinion" class="alertDiv" style="display: none;">
+			<p class="alertTitle">审核意见</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<label>订单编号</label><input disabled="true" type="text" id="auditOrderId"/>
+				</div>
+				<div class="labelDiv">	
+					<label>审核意见</label>
+					<select id="auditorderStatus">
+					    <option value="">请选择</option>
+						<option value="0">通过</option>
+						<!-- <option value="1">通过，转调拨单</option> -->
+						<option value="2">不通过</option>
+					</select>
+				</div>
+				<div class="labelDiv">
+					<label>不通过原因描述</label>
+					<textarea id="auditreason"></textarea>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure" id="auditsure">确认</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>
+		<!--待我处理_转调拨单-->
+		<div id="singleDial" class="alertDiv" style="display: none;">
+			  <p class="alertTitle">调拨订单</p>
+			  <div class="alertInputDiv">
+			  	<div class="labelDiv">	
+					<label>订单编号</label>
+					<input />
+				</div>
+				<div class="labelDiv">
+					<label>资源拨出渠道商编号</label>
+					<input />
+				</div>
+				<div class="labelDiv">	
+					<label>调拨拨入渠道商编号</label>
+					<input />
+				</div>
+					<div class="labelDiv">
+					<label>调拨资源归属省</label>
+      	    		<select>
+      	    			<option>请选择</option>
+      	    			<option>北京</option>
+      	    			<option>天津</option>
+      	    			<option>湖北</option>
+      	    			<option>湖南</option>
+      	    		</select>
+				</div>
+				<div class="labelDiv">
+					<label>调拨资源归属地市</label>
+      	    		<select>
+      	    			<option>请选择</option>
+      	    			<option>广州</option>
+      	    			<option>深圳</option>
+      	    			<option>汕尾</option>
+      	    			<option>珠海</option>
+      	    		</select>
+				</div>
+				<div class="labelDiv">	
+					<label>调拨起始号码</label>
+					<input />
+				</div>
+				<div class="labelDiv">	
+					<label>调拨结束号码</label>
+					<input />
+				</div>
+				<div class="labelDiv">	
+					<label>调拨SIM卡起始IMSI</label>
+					<input />
+				</div>
+				<div class="labelDiv">	
+					<label>调拨SIM卡结束IMSI</label>
+					<input />
+				</div>
+				<div class="labelDiv">	
+					<label>调拨号码数量</label>
+					<input />
+				</div>
+			    <div class="labelDiv">	
+					<label>调拨SIM卡数量</label>
+					<input />
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure">确认</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>
+		<!--订单查询结果_查看详情-->
+		<div id="lookDetial" class="alertDiv" style="display: none;">
+			<p class="alertTitle">查看详情</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">您的订单<span id="lookorderId"></span>，详情如下：</p>
+				</div>
+				<div class="labelDiv">
+					<label>订单类型：</label><span id="looktype"></span>
+				</div>
+				<div class="labelDiv">
+					<label>渠道商编号：</label><span id="lookprocessingChannel"></span>
+				</div>
+				<div class="labelDiv">
+					<label>订单标题：</label><span id="lookorderTitle"></span>
+				</div>
+				<div class="labelDiv">
+					<label>申请时间：</label><span id="lookmodifyDate"></span>
+				</div>
+				<div class="labelDiv">
+					<label>归属号段：</label><span id="lookhlr"></span>
+				</div>
+				<div class="labelDiv">
+					<label>号码数量：</label><span id="looknumberQuantity"></span>
+				</div>
+				<div class="labelDiv">
+					<label>SIM卡数量：</label><span id="looksimQuantity"></span>
+				</div>
+				<div class="labelDiv">
+					<label>归属省份：</label><span id="lookprovCode"></span>
+				</div>
+				<div class="labelDiv">
+					<label>归属地市：</label><span id="lookareaCode"></span>
+				</div>
+				<div class="labelDiv">
+					<label>审核结果以及原因：</label><span id="lookreason"></span>
+				</div>
+				<div class="alertsureDiv">
+					<button class="sure" onclick="layer.close(layer.index);">确认</button>
+				</div>
+			</div>
+		</div>
+		<!--订单查询结果_审核未通过_查看原因-->
+		<div id="lookReason" class="alertDiv" style="display: none;">
+			<p class="alertTitle">查看原因</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">订单<span class="color60" style="font-size: 20px;">XXX201801230001</span>申请资源未通过审核</p>
+				    <p class="f-size20">未通过原因：<span style="font-size: 20px;">资源不足</span></p>
+				</div>
+				<div class="alertsureDiv">
+					<button class="sure">确认</button>
+				</div>
+			</div>
+		</div>
+		<!--订单查询结果_调拨失败_查看原因-->
+		<div id="lookcausation" class="alertDiv" style="display: none;">
+			<p class="alertTitle">查看原因</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">订单<span class="color60" style="font-size: 20px;">XXX201801230001</span>申请资源无法完成调拨。</p>
+				    <p class="f-size20">未通过原因：<span style="font-size: 20px;">资源不足</span></p>
+				</div>
+				<div class="alertsureDiv">
+					<button class="sure">确认</button>
+				</div>
+			</div>
+		</div>
+	    
+	    <!--订单查询结果_审核成功_撤销-->
+	    <div id="revoke" class="alertDiv" style="display: none;">
+			<p class="alertTitle">撤销</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">是否撤销订单 <span class="color60" style="font-size: 20px;">XXX201801230001</span>资源申请？</p>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure">确认</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>	
+		<!--订单查询结果_审核成功_撤销_成功-->
+	    <div id="revokesuccess" class="alertDiv" style="display: none;">
+			<p class="alertTitle">撤销成功</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">已成功撤销订单 <span class="color60" style="font-size: 20px;">XXX201801230001</span>资源申请。</p>
+				</div>
+				<div class="alertsureDiv">
+					<button class="sure">确认</button>
+				</div>
+			</div>
+		</div>
+		<!--订单查询结果_审核成功_撤销_失败-->
+	    <div id="revokefail" class="alertDiv" style="display: none;">
+			<p class="alertTitle">撤销失败</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">为订单  <span class="color60" style="font-size: 20px;">XXX201801230001</span> 撤销资源申请失败，请稍后再试！。</p>
+				    <p class="f-size20">失败原因：<span style="font-size: 20px;">网络异常。</span></p>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure">重试</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>
+	    <!--订单查询结果_资源调拨_撤销-->
+	    <div id="revokeallot" class="alertDiv" style="display: none;">
+			<p class="alertTitle">撤销</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">是否撤销订单 <span class="color60" style="font-size: 20px;">XXX201801230001</span>的资源调拨？</p>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure">确认</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>
+		<!--订单查询结果_资源调拨_撤销_成功-->
+	    <div id="revokeallotsuccess" class="alertDiv" style="display: none;">
+			<p class="alertTitle">撤销成功</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">已成功撤销订单 <span class="color60" style="font-size: 20px;">XXX201801230001</span>资源调拨。</p>
+				</div>
+				<div class="alertsureDiv">
+					<button class="sure">确认</button>
+				</div>
+			</div>
+		</div>
+		<!--订单查询结果_资源调拨_撤销_失败-->
+	    <div id="revokeallotfail" class="alertDiv" style="display: none;">
+			<p class="alertTitle">撤销失败</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">为订单  <span class="color60" style="font-size: 20px;">XXX201801230001</span> 撤销资源调拨失败，请稍后再试！。</p>
+				    <p class="f-size20">失败原因：<span style="font-size: 20px;">网络异常。</span></p>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure">重试</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>
+		  <!--订单查询结果_取消申请-->
+	    <div id="withdraw" class="alertDiv" style="display: none;">
+			<p class="alertTitle">取消申请</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">您正在为订单 <span class="color60" style="font-size: 20px;">XXX201801230001</span>进行取消申请资源操作，请确认是否继续。</p>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure">确认</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>
+		<!--订单查询结果_取消申请_成功-->
+	    <div id="withdrawsuccess" class="alertDiv" style="display: none;">
+			<p class="alertTitle">取消成功</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">已成功为订单  <span class="color60" style="font-size: 20px;">XXX201801230001</span>取消申请资源。</p>
+				</div>
+				<div class="alertsureDiv">
+					<button class="sure">确认</button>
+				</div>
+			</div>
+		</div>
+		<!--订单查询结果_取消申请_失败-->
+	    <div id="withdrawfail" class="alertDiv" style="display: none;">
+			<p class="alertTitle">取消失败</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">为订单  <span class="color60" style="font-size: 20px;">XXX201801230001</span>取消申请资源失败，请稍后再试！</p>
+				    <p class="f-size20">失败原因：<span style="font-size: 20px;">网络异常。</span></p>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure">重试</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>
+		
+		  <!--资源查询结果_回收资源-->
+	    <div id="recyclingResources" class="alertDiv" style="display: none;">
+			<p class="alertTitle">回收资源</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">是否确认回收号码资源 <span class="color60" style="font-size: 20px;">13700009111</span>?</p>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure">确认</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>
+		<!--资源查询结果_回收资源_成功-->
+	    <div id="recyclingResourcessuccess" class="alertDiv" style="display: none;">
+			<p class="alertTitle">回收成功</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">已成功回收号码资源 <span class="color60" style="font-size: 20px;">13700009111</span></p>
+				</div>
+				<div class="alertsureDiv">
+					<button class="sure">确认</button>
+				</div>
+			</div>
+		</div>
+		<!--资源查询结果_回收资源_失败-->
+	    <div id="recyclingResourcesfail" class="alertDiv" style="display: none;">
+			<p class="alertTitle">回收失败</p>
+			<div class="alertInputDiv">
+				<div class="labelDiv">
+					<p class="f-size20">回收号码资源 <span class="color60" style="font-size: 20px;">13700009111</span>失败，请稍后再试！</p>
+				    <p class="f-size20">失败原因：<span style="font-size: 20px;">网络异常。</span></p>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure">重试</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>
+	    <!--订单生成-->
+		<div id="orderproduct" class="alertDiv" style="display: none;">
+			<p class="alertTitle">订单生成</p>
+			<div class="alertInputDiv">
+			<div class="successAlert" id="successAlert">成功提交申请资源订单</div>
+			<div class="successAlert" id="failAlert">提交申请资源订单操作失败<p id="failAlertmess"></p></div>
+				<div class="labelDiv">
+					<p class="f-size20">您正在进行申请资源操作，请核对以下信息并确认。</p>
+				</div>
+				<div class="labelDiv">
+					<label>订单类型：</label><span id="al_orderType"></span>
+				</div>
+				<div class="labelDiv">
+					<label>渠道商编号：</label><span id="al_tar_channelCode"></span>
+				</div>
+				<div class="labelDiv ">
+					<label>订单标题：</label><span id="al_orderTitle"></span>
+				</div>
+				<div class="labelDiv ">
+					<label>申请时间：</label><span id="al_orderDate"></span>
+				</div>
+				<div class="labelDiv ">
+					<label>订单编号：</label><span id="al_orderNumber"></span>
+				</div>
+				<div class="labelDiv">
+					<label>归属号段：</label><span id="al_hlr"></span>
+				</div>
+				<div class="labelDiv">
+					<label>号码数量：</label><span id="al_number_quantity"></span>
+				</div>
+				<div class="labelDiv recoveryDiv">
+					<label>起始号码：</label><span id="al_start_number"></span>
+				</div>
+				<div class="labelDiv recoveryDiv">
+					<label>结束号码：</label><span id="al_end_number"></span>
+				</div>
+				<div class="labelDiv recoveryDiv">
+					<label>起始SIM：</label><span id="al_start_imsi"></span>
+				</div>
+				<div class="labelDiv recoveryDiv">
+					<label>结束SIM：</label><span id="al_end_imsi"></span>
+				</div>
+				<div class="labelDiv">
+					<label>SIM卡数量：</label><span id="al_sim_quantity"></span>
+				</div>
+				<div class="labelDiv">
+					<label>归属省份：</label><span id="al_provCode"></span>
+				</div>
+				<div class="labelDiv">
+					<label>归属地市：</label><span id="al_areaCode"></span>
+				</div>
+				<div class="alertbtnDiv">
+					<button class="sure" id="productOrder">确认</button><button class="cancel" onclick="layer.close(layer.index);">取消</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/common/jquery-2.1.0.min.js"></script>
+	<script src="../../js/layer/layer.js"></script>
+	<script src="../../js/common/ajax.js"></script>
+	<script src="../../js/common/paging.js"></script>
+	<script type="text/javascript" src="../../js/laydate/laydate.js"></script>
+	<script src="../../js/common/provinces.js"></script>
+	<script src="../../js/common/provinces2.js"></script>
+	<script src="../../js/channelManagement/resources_order.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#src_distpicker").distpicker("src_provCode","src_areaCode");
+		$("#or_distpicker").distpicker("or_provCode","or_areaCode");
+		$("#orderprovince").distpicker("sheng","shi");
+	})
+	
+	</script>
+</html>

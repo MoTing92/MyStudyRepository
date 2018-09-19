@@ -1,0 +1,281 @@
+/*右边内容*/
+.rightContent {
+  height: 100%;
+  margin-left: 240px;
+}
+.rightContent h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.rightContent .queryInput {
+  margin-top: 34px;
+}
+.rightContent .queryInput label {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+.rightContent .queryInput label span {
+  font-size: 16px;
+}
+.rightContent .queryInput label select {
+  width: 158px;
+  height: 29px;
+  margin-left: 8px;
+  margin-right: 20px;
+}
+.rightContent .queryInput label input[type="text"] {
+  width: 158px;
+  height: 26px;
+  margin-left: 8px;
+  margin-right: 20px;
+  padding-left: 10px;
+}
+.rightContent .openinfo {
+  display: block; 
+  padding: 28px 0 20px 40px;
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+/* 证件信息 */
+#comfirmBtn {
+  width: 100px;
+  height: 30px;
+  background-color: #60A5F5;
+  color: #fff;
+  border: 0 none;
+  border-radius: 4px;
+}
+#resetBtn {
+  width: 100px;
+  height: 30px;
+  background-color: #F6FAFF;
+  color: #60A5F5;
+  border: 1px solid #9ECDFD;
+  border-radius: 4px;
+}
+/* 选择号码 */
+.openinfo .queryInput #phoneNumBtn,
+.openinfo .queryInput #SIMNumberBtn {
+  width: 60px;
+  height: 30px;
+  background-color: #60A5F5;
+  color: #fff;
+  border-radius: 15px;
+  border: 0 none;
+}
+.openinfo .queryInput label.SIMlabel {
+  margin-left: 100px;
+}
+/*证件照*/
+.authPhoto .photoblock {
+  float: left;
+  margin-right: 10px;
+}
+.authPhoto .photoblock h4 {
+  text-align: center;
+}
+.authPhoto .photoblock img {
+  width: 270px;
+  height: 200px;
+}
+/* 账单信息 */
+.rightContent .queryInput label input[type="text"].addressTxt {
+  width: 300px;
+}
+/* 订购套餐 */
+#orderPackage {
+  width: 200px;
+  height: 50px;
+  background-color: #60A5F5;
+  color: #fff;
+  border: 0 none;
+  border-radius: 4px;
+  font-size: 22px;
+}
+/* 费用信息 */
+.openinfo .queryInput table.costTab {
+  width: 100%;
+  margin-bottom: 43px;
+}
+.openinfo .queryInput table.costTab th {
+  height: 43px;
+  background-color: #F6FAFF;
+  border: 1px solid #9ECDFD;
+}
+.openinfo .queryInput table.costTab th.discount {
+  width: 40%;
+}
+.openinfo .queryInput table.costTab tr td {
+  height: 43px;
+  border: 1px solid #9ECDFD;
+  text-align: center;
+}
+#admissibleUnit, #admissibilityNumber, #receTotalAmount, #collTotalAmount, #totalDiscount {
+  background-color: #D3D5DB;
+  border: 1px solid #F4F4F4;
+  height: 31px;
+}
+/* 发展人信息 */
+.print {
+  text-align: center;
+}
+.print #printBtn {
+  width: 225px;
+  height: 61px;
+  background-color: #60A5F5;
+  border: 0 none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 24px;
+}
+
+/*弹框*/
+.confirmFram {
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  left: 0px;
+  top: 0px;
+  z-index: 20;
+  filter: alpha(opacity=90);
+  opacity: 0.9 !important;
+}
+.confirmFram .framTips {
+  width: 520px;
+  height: 266px;
+  z-index: 21;
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color: #fff;
+  margin:auto;
+  filter: alpha(opacity=100);
+  opacity: 1 !important;
+}
+/*开户成功弹框*/
+.framTips .successTitle {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 25px;
+  text-align: left;
+  font-size: 18px;
+  background-color: #60a5f5;
+  color: #fff;
+}
+.framTips .successContent {
+  margin: 40px 76px;
+  color: #2F3033;
+  font-size: 14px;
+  font-weight: bold;
+}
+.framTips .successContent p {
+  font-size: 18px;
+}
+.successBtnBlock {
+  text-align: center;
+}
+#comfiemBtn, #cancelBtn {
+  width: 160px;
+  height: 50px;
+  font-size: 20px;
+  background-color: transparent;
+  color: #60a5f5;
+  border-radius: 4px;
+  color: #fff;
+}
+#comfiemBtn {
+  background-color: #60a5f5;
+  margin-right: 10px;
+}
+#cancelBtn {
+  background-color: #CCCDCC;
+}
+
+/* 营业选号 */
+.confirmFram .successFram {
+  width: 1200px;
+  height: 600px;
+  background-color: #F5F7FA;
+}
+.openinfo {
+  display: block; 
+}
+.successFram .successContent {
+  margin: 21px 31px;
+}
+.successFram .successContent .openinfo {
+  background-color: #fff;
+  padding: 28px 23px;
+}
+.successFram .successContent .queryCon {
+  margin-bottom: 10px;
+}
+.successFram .successContent .openinfo h2 {
+  font-size: 16px;
+  color: #2F3033;
+}
+.successFram .successContent .openinfo .queryInput {
+  margin-top: 20px;
+}
+.successFram .successContent .openinfo label span {
+  margin-right: 16px;
+}
+.successFram .successContent .openinfo #bussQueryBtn, .successFram .successContent .openinfo #bussResetBtn {
+  margin-left: 20px;
+  width: 99px;
+  height: 30px;
+  border: 0 none;
+  border-radius: 4px;
+}
+.successFram .successContent .openinfo #bussQueryBtn {
+  background-color: #60A5F5;
+  color: #fff;
+}
+.successFram .successContent .openinfo #bussResetBtn {
+  border: 1px solid #9ECDFD;
+  background-color: #F6FAFF;
+  color: #9ECDFD;
+}
+.successFram .successContent .openinfo table {
+  width: 100%;
+  margin-top: 23px;
+}
+.successFram .successContent .openinfo table th,
+.successFram .successContent .openinfo table td{
+  text-align: center;
+  height: 56px;
+  border: 1px solid #9ECDFD;
+}
+.successFram .successContent .openinfo .successBtnBlock {
+  margin-top: 10px;
+}
+/* 虚拟写卡 */
+.confirmFram .fictitious {
+  height: 306px;
+}
+.confirmFram .fictitious .successContent label {
+  display: block;
+  margin-bottom: 10px;
+}
+.confirmFram .fictitious .successContent label span {
+  text-align: right;
+  display: inline-block;
+  width: 80px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+.confirmFram .fictitious .successContent label input {
+  padding-left: 10px;
+  width: 230px;
+  height: 29px;
+  background-color: #D3D5DB;
+}
+.confirmFram .fictitious .successContent label select {
+  width: 242px;
+  height: 29px;
+}
+
+

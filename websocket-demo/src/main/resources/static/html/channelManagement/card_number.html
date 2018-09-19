@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<title>卡号资源渠道管理</title>
+		 <link rel="shortcut icon" href="http://www.10086.cn/favicon.ico"  type="images/x-icon">
+		<link rel="stylesheet" href="../../css/common/bootstrap.css" />
+		<link rel="stylesheet" href="../../css/mycss/public.css" />
+		<link rel="stylesheet" href="../../css/mycss/card_number.css" />
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<ul>
+				<li class="title">
+					<span class="f-size20">渠道管理系统</span>
+				</li>
+				<li><a id="businessShall" href="javascript:;">营业厅管理</a></li>
+				<li class="active"><a id="channel" href="javascript:;">渠道管理</a></li>
+				<p><span id="username" class="mr20 inblock"></span><a class="inblock mr40" id="account" href="javascript:;">账号配置</a><a href="" id="logout">登出&rsaquo;</a></p>
+			</ul>
+			<div class="clearfix"></div>
+		</div>
+		<!--左侧导航栏-->
+		<div class="channelContent">
+			<ul>
+			<li><a href="../channelManagement/resource_allocation.html"><i class="img1"></i><span>渠道资源配置</span></a></li>
+			<li><a href="../channelManagement/resources_order.html"><i class="img2"></i><span>资源订单管理</span></a></li>
+			<li><a href="../channelManagement/pretty_number.html"><i class="img3"></i><span>靓号规则管理</span></a></li>
+			<li class="active"><a href="javascript:;"><i class="img4"></i><span>卡号资源渠道管理</span></a></li>
+			<li><a href="../channelManagement/number_query.html"><i class="img5"></i><span>卡号资源查询</span></a></li>
+			<li><a href="../channelManagement/commissions.html"><i class="img6"></i><span>佣金管理</span></a></li>
+			</ul>
+		</div>
+		<!--右边-->
+	    <div class="rightContent">
+	    	<!--SIM实卡验收-->
+	    	<div class="checkSim">
+	    		<p>SIM实卡验收</p>
+	    		<div class="inputDiv">
+	    		<form enctype="multipart/form-data" action="" id="leadingForm">
+	    				<span class="upload">上传文件
+	    					<input type="file" value="上传文件" multiple="true" class="change" id="resFile" name="resFile"/>
+	    				</span><span>仅支持Excel文件格式.csv</span>
+	    			<a href="" id="downExcel">下载模板</a>
+	    			<label>申请单编号</label><input class="text" id="resOrderId" name="resOrderId"/>
+	    			<button class="leading-in" id="submitleading">导入资源</button><button class="reset">重置</button>
+	    		</form>
+	    		</div>
+	    	</div>
+	    	<!--SIM卡库存盘点-->
+	    	<div class="inventory">
+	    		<p>SIM卡库存盘点</p>
+	    		<div class="inputDiv mb20">
+	    			<label>归属运营商</label>
+	    			<select id="mnoId">
+	    			    <option value="">请选择</option>
+	    				<option value="CMCC">移动</option>
+	    				<option value="CTCC">电信</option>
+	    				<option value="CUCC">联通</option>
+	    			</select>
+	    			<label>入库时间</label><input type="text" id="startDate"/><span>起至</span><input type="text" id="endDate"/><span>止</span>
+	    		</div>
+	    			<div class="inputDiv mb20">
+	    			<label>渠道商编号</label>
+	    			<input id="channelCode"/>
+	    			<label>SIM卡状态</label>
+	    			<select id="manageStatus">
+	    			    <option value="">请选择</option>
+	    				<option value="1">入库成功</option>
+	    				<option value="2">入库失败</option>
+	    			</select>
+	    			<label>归属号段</label><input type="number" id="resNumberHlr"/>
+	    		</div>
+	    		<div class="inputDiv" id=provinces>
+	    		    <label>归属省份</label>
+      	    		<select id="sheng">
+      	    			
+      	    		</select>
+      	    		<label>归属地市</label>
+      	    		<select id="shi">
+      	    			
+      	    		</select>
+	    		</div>
+	    		<div class="buttonDiv">
+	    			<button class="researchButton" id="sim_research">查询</button><button class="resetButton" id="sim_reset">重置</button>
+	    		</div>
+	    	</div>
+	    	<!--SIM卡库存查询结果-->
+	    	<div class="result">
+	    		<p>SIM卡库存查询结果</p>
+	    		<div class="result_SIM" style="margin-right:20px"></div>
+	    		<div id="page" class="page_div floatr"></div>
+	    		 <div class="clearfix"></div>
+	    		<!-- <table>
+	    			<tr>
+	    				<td>ICCID</td><td>IMSI</td><td>SIM卡状态</td><td>归属省份</td><td>归属地市</td><td>归属运营商</td><td>归属号段</td><td>归属号码</td><td>入库时间</td><td>申请单编号</td><td>备注</td>
+	    			</tr>
+	    			<tr>
+	    				<td>89860 0MFSS YYGXX XXXXP</td><td></td><td>入库成功</td><td>广东</td><td>深圳</td><td>移动</td><td></td><td>13700019000</td><td>2018-1-29</td><td>201801230001</td><td></td>
+	    			</tr>
+	    			<tr>
+	    				<td>89860 0MFSS YYGXX XXXXP</td><td></td><td>入库失败</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    			</tr>
+	    		</table> -->
+	    	</div>
+	    </div>
+	     <!--弹窗-->
+       <!--遮罩层-->
+		<div id="fullbg"></div>
+		<div id="dialog">
+			<div class="success " >
+			<p>导入成功</p>
+			<div class="text">已成功导入SIM实卡资源共计280个。</div>
+			<div class="btn">
+				<button class="sure" onclick="closeBg()">确认</button>
+			</div>
+			</div>
+			<div class="default none">
+				<p>导入失败</p>
+			<div class="text">导入SIM实卡资源失败，请稍后再试！失败原因异常</div>
+			<div class="btn">
+				<button class="reset" onclick="">重试</button><button class="cancel" onclick="closeBg()">取消</button>
+			</div>
+			</div>
+		</div>
+	</body>  
+	<script src="../../js/common/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="../../js/common/provinces2.js" ></script>
+	<script type="text/javascript" src="../../js/common/ajax.js" ></script>
+	<script type="text/javascript" src="../../js/common/paging.js" ></script>
+	<script type="text/javascript" src="../../js/common/jquery.form.js" ></script>
+	<script type="text/javascript" src="../../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="../../js/channelManagement/card_number.js" ></script>
+		<script>
+		$(function(){
+			$("#provinces").distpicker("sheng","shi");
+		})
+		//显示灰色 jQuery 遮罩层 
+		function showBg() { 
+		var bh = $("body").height(); 
+		var bw = $("body").width(); 
+		$("#fullbg").css({ 
+		height:"100%",
+		width:"100%", 
+		display:"block" 
+		}); 
+		$("#dialog").css({
+			left:bw/2-300+"px",
+			top:100+"px"
+		})
+		$("#dialog").show(); 
+		} 
+		//关闭灰色 jQuery 遮罩 
+		function closeBg() { 
+		$("#fullbg,#dialo").hide(); 
+		} 
+	</script>
+</html>
