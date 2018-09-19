@@ -1,0 +1,272 @@
+@charset "utf-8";
+.rightContent{
+	width:calc(100%-254px);
+	width: -moz-calc(100%-254px);
+	width: -webkit-calc(100%-254px);
+	height: 100%;
+	margin-top: 10px;
+	margin-left: 254px;
+}
+/*SIM实卡验收*/
+.rightContent .checkSim{
+	background-color: #ffffff;
+	padding: 20px 0 0 30px;
+}
+.rightContent .checkSim p{
+	font-size: 16px;
+	color: #2f3033;
+}
+.rightContent .checkSim .inputDiv{
+	padding: 30px 0;
+	
+}
+.rightContent .checkSim .inputDiv form{
+	display: inline-block;
+}
+.rightContent .checkSim .inputDiv form .upload{
+	display: inline-block;
+	width: 87px;
+	height: 31px;
+	line-height: 31px;
+	text-align: center;
+	background-color: #60a5f5;
+	border: none;
+	border-radius: 5px;
+	vertical-align: middle;
+	position: relative;
+	color: #ffffff;
+	font-size: 14px;
+	margin-right: 10px;
+}
+.rightContent .checkSim .inputDiv form .change{
+	display: inline-block;
+    width: 87px;
+    height: 31px;
+	position: absolute;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.rightContent .checkSim .inputDiv form span{
+	font-size: 16px;
+	color: #2f3033;
+}
+.rightContent .checkSim .inputDiv a{
+	font-size: 16px;
+	color: #60a5f5;
+}
+.rightContent .checkSim .inputDiv label{
+	font-size: 16px;
+	color: #2f3033;
+	display: inline-block;
+	margin-left: 100px;
+}
+.rightContent .checkSim .inputDiv .number{
+	display: inline-block;
+	padding: 10px 15px;
+	margin-left: 15px;
+	width: 188px;
+	height: 30px;
+	line-height: 10px;
+	background-color: #f4f4f4;
+	border-radius: 5px;
+	border: solid 1px #d3d5db;
+	font-size: 12px;
+	color: #686868;
+}
+.rightContent .checkSim .inputDiv .leading-in{
+	width: 86px;
+	height: 31px;
+	border: none;
+	background-color: #60a5f5;
+	border-radius:5px;
+	font-size: 14px;
+	color: #ffffff;
+	margin-right: 15px;
+	margin-left: 30px;
+	vertical-align: top;
+}
+.rightContent .checkSim .inputDiv .reset{
+	width: 86px;
+	height: 31px;
+	border: none;
+	border: solid 1px #9ecdfd;
+	border-radius:5px;
+	font-size: 14px;
+	color: #60a5f5;
+	vertical-align: top;
+}
+/*SIM卡库存盘点*/
+.rightContent .inventory{
+	background-color: #ffffff;
+	margin-top: 10px;
+	padding: 20px 0 2px  30px;
+}
+.rightContent .inventory p{
+	font-size: 16px;
+	color: #2f3033;
+	margin-bottom: 20px;
+}
+.rightContent .inventory .inputDiv label{
+	display: inline-block;
+	width: 80px;
+	margin-right: 10px;
+	font-size: 16px;
+	color: #2f3033;
+	text-align: right;
+	
+}
+.rightContent .inventory .inputDiv select{
+	width: 180px;
+	height: 31px;
+	border: none;
+	border-radius: 5px;
+	border: solid 1px #d3d5db;
+	margin-right: 15px;
+}
+.rightContent .inventory .inputDiv input{
+	width: 180px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	border: solid 1px #d3d5db;
+}
+.rightContent .inventory .buttonDiv{
+	width: 220px;
+	margin: 30px auto;
+}
+.rightContent .inventory .researchButton{
+	width: 100px;
+	height: 30px;
+	background-color: #60a5f5;
+	border: none;
+	border-radius: 5px;
+	color: #ffffff;
+	font-size: 14px;
+	margin-left: 10px;
+}
+.rightContent .inventory .resetButton{
+	width: 100px;
+	height: 30px;
+	margin-left: 10px;
+	border: none;
+	background-color: #f6faff;
+	border-radius: 5px;
+	border: solid 1px #9ecdfd;
+	font-size: 14px;
+	color: #60a5f5;
+}
+/*SIM卡库存查询结果*/
+.rightContent .result{
+	background-color:#ffffff;
+	margin-top: 10px;
+	padding: 20px 0 50px 30px;
+}
+.rightContent .result p{
+	font-size: 16px;
+	color: #2f3033;
+	margin-bottom: 20px;
+}
+.rightContent .result table{
+	width: 100%;
+	margin-right: 30px;
+}
+.rightContent .result table tr:first-child{
+	background-color: #f6faff;
+}
+.rightContent .result table tr td{
+	padding: 10px 0;
+	text-align: center;
+	color: #2f3033;
+	font-size: 14px;
+	border: solid 1px #9ecdfd;
+}
+/*弹窗样式*/
+#fullbg { 
+background-color:gray; 
+opacity:0.5; 
+position:fixed; 
+top:0; 
+left:0; 
+z-index:3; 
+filter:alpha(opacity=50); 
+-moz-opacity:0.5; 
+-khtml-opacity:0.5; 
+} 
+#dialog { 
+width: 600px;
+height: 347px;
+margin-bottom: 100px;
+background-color: #ffffff;
+/*position:fixed !important;*/ /* 浮动对话框 */ 
+position:absolute; 
+z-index:5; 
+border-radius:5px; 
+display:none; 
+} 
+#dialog .success p{
+	width: 600px;
+	height: 60px;
+	line-height: 40px;
+	padding: 10px 20px;
+	background-color: #60a5f5;
+	font-size: 20px;
+	color: #ffffff;
+}
+#dialog .success .text{
+	width: 380px;
+    margin: 0 auto;;
+	font-size: 24px;
+	color: #2f3033;
+	padding: 30px 0;
+}
+#dialog .success .btn{
+	width: 232px;
+	margin: 0 auto;
+}
+#dialog .success .btn .sure{
+	width: 232px;
+	height: 63px;
+	background-color: #60a5f5;
+	color: #ffffff;
+	font-size: 20px;
+	border: none;
+}
+#dialog .default p{
+	width: 600px;
+	height: 60px;
+	line-height: 40px;
+	padding: 10px 20px;
+	background-color: #60a5f5;
+	font-size: 20px;
+	color: #ffffff;
+}
+#dialog .default .text{
+	width: 470px;
+    margin: 0 auto;
+	font-size: 24px;
+	color: #2f3033;
+	padding: 30px 0;
+}
+#dialog .default .btn{
+	width: 470px;
+	margin: 0 auto;
+}
+#dialog .default .btn .reset{
+	width: 230px;
+	height: 63px;
+	background-color: #60a5f5;
+	color: #ffffff;
+	font-size: 20px;
+	margin-right: 10px;
+	border: none;
+}
+#dialog .default .btn .cancel{
+	width: 230px;
+	height: 63px;
+	background-color: #cccdcc;
+	color: #ffffff;
+	font-size: 20px;
+	border: none;
+}

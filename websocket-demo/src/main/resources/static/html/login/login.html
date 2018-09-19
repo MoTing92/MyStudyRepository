@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<title>登录</title>
+		<link rel="shortcut icon" href="http://www.10086.cn/favicon.ico"  type="images/x-icon">
+		<link rel="stylesheet" href="../../css/common/bootstrap.css" />
+		<link rel="stylesheet" href="../../css/common/blue.css" />
+		<link rel="stylesheet" href="../../css/mycss/public.css" />
+		<link rel="stylesheet" href="../../css/mycss/login.css" />
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+		  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!--整体容器-->
+		<div class="container">
+			<!--登录盒子-->
+			<div class="loginDiv">
+				<!--标题-->
+			    <div class="title">
+			    	<p>渠道管理系统</p>
+			    </div> 
+			    <!--主体-->
+			    	<div class="loginContent">
+			    		<!--填写账号密码表单-->
+			    		<form>
+			    		<div class="form-group ption-r">
+			    			<label class="f-size16 color0 mr20">账号</label><input type="text" class="loginInput" id="username"/>
+			    			<div class="errorDiv none">请输入账号</div>
+			    		</div>
+			    		<div class="form-group mt30 ption-r">
+			    			<label class="f-size16 color0 mr20">密码</label><input type="password" class="loginInput" id="password"/>
+			    		     <div class="errorDiv none">请输入密码</div>
+			    		</div>
+			    		 </form>
+			    		 <!--记住密码和忘记密码修改密码-->
+			    		 <div class="ml40">
+			    		 	<input type="checkbox" class="inblock vt"  id="rememberCheck" checked/><label class="f-size12 color0 font-weight-normal">在本机记住账号</label>
+			    		 	<p class="floatr"><a href="reset_password.html" class="f-size12 color60 cursor">忘记密码</a><a href="change_password.html" class="f-size12 color60 cursor inblock ml10">修改密码</a></p>
+			    		 </div>
+			    		 <div class="clearfix"></div>
+			    		 <!--登录按钮-->
+			    		 <div class="mt40 width320" style="margin-left: 35px;">
+			    		 	<!--<button class="button loginButton" data-toggle="modal" data-target="#myModal"><span class="f-size16 color60">登录</span></button>-->
+			    		<button class="button loginButton f-size16 colorff" data-toggle="modal" id="loginButton">登录</button>
+			    		<button class="button resetButton f-size16 color60" id="resetButton" >重置</button>
+			    		 </div>
+			    	</div>
+			    <!--匹配失败弹框-->
+			    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-body">
+								<p class="f-size16 color0 text-center" id="message"></p>
+								<div class="width396 mt30">
+									<button type="button" class="btn sureButton" data-dismiss="modal"><span class="f-size16 colorff">确认</span>
+								</button>
+								</div>
+							</div>
+						</div>
+						<!-- /.modal-content -->
+					</div>
+					<!-- /.modal -->
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-2.1.0.min.js" ></script>
+		<script type="text/javascript" src="../../js/common/bootstrap.js" ></script>
+		<script type="text/javascript" src="../../js/common/ajax.js" ></script>
+	    <script type="text/javascript" src="../../js/login/login.js" ></script>
+	</body>
+</html>

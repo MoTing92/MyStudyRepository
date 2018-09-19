@@ -1,0 +1,398 @@
+@charset "utf-8";
+.rightContent{
+	width:calc(100%-254px);
+	width: -moz-calc(100%-254px);
+	width: -webkit-calc(100%-254px);
+	height: 100%;
+	margin-top: 10px;
+	margin-left: 254px;
+	padding-bottom: 50px;
+}
+/*订单生成*/
+.orderProduct{
+	background-color: #ffffff;
+	padding: 25px 30px 25px 20px;
+}
+p.title{
+	width: 100%;
+	height: 56px;
+	line-height: 56px;
+	padding-left: 20px;
+	background-color: #f6faff;
+	border: solid 1px #9ecdfd;
+	font-size: 16px;
+	color: #60a5f5;
+	background: url(../../img/channelManagement/open.png) no-repeat;
+	background-size: 20px 12px;
+	background-position: 99% 20px;
+}
+.closeimg{
+	width: 100%;
+	height: 56px;
+	line-height: 56px;
+	padding-left: 20px;
+	background-color: #f6faff;
+	border: solid 1px #9ecdfd;
+	font-size: 16px;
+	color: #60a5f5;
+	background: url(../../img/channelManagement/close.png) no-repeat;
+	background-size: 20px 12px;
+	background-position: 99% 20px;
+}
+.open{
+	width: 100%;
+	height: 56px;
+	line-height: 56px;
+	padding-left: 20px;
+	background-color: #f6faff;
+	border: solid 1px #9ecdfd;
+	font-size: 16px;
+	color: #60a5f5;
+	background: url(../../img/channelManagement/open.png) no-repeat;
+	background-size: 20px 12px;
+	background-position: 99% 20px;
+}
+.orderProduct .orderInput{
+	margin-left: 15px;
+	margin-top: 20px;
+}
+.orderProduct .orderInput .inputDiv{
+	margin-bottom: 20px;
+}
+.orderProduct .orderInput .inputDiv label{
+	display: inline-block;
+	width: 80px;
+	margin-right: 10px;
+	font-size: 16px;
+	color: #2f3033;
+}
+.orderProduct .orderInput .inputDiv select{
+	width: 188px;
+	height: 30px;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 2px;
+	border: solid 1px #d3d5db;
+	margin-right: 50px;
+}
+.orderProduct .orderInput .inputDiv input{
+	width: 188px;
+	height: 30px;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 2px;
+	border: solid 1px #d3d5db;
+	margin-right: 50px;
+}
+.orderProduct .orderInput .inputDiv span{
+  width: 188px;
+    line-height: 30px;
+     /*height: 30px; */
+    background-color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    border: solid 1px #d3d5db;
+    margin-right: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+.orderProduct .orderInput .btnDiv{
+	width: 210px;
+	margin: 0 auto;
+}
+.orderProduct .orderInput .btnDiv .sure{
+	width: 100px;
+	height: 30px;
+	background-color: #60a5f5;
+	border: none;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #ffffff;
+	margin-right: 10px;
+}
+.orderProduct .orderInput .btnDiv .reset{
+	width: 100px;
+	height: 30px;
+	background-color: #f6faff;
+	border: none;
+	border: solid 1px #9ecdfd;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #60a5f5;
+}
+/*待我处理*/
+.pending{
+	background-color: #ffffff;
+	padding: 25px 30px 25px 20px;
+	margin-top: 10px;
+} 
+.pending .inputDiv{
+	margin-left: 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.pending .inputDiv label{
+	display: inline-block;
+	width: 65px;
+	margin-right: 10px;
+	font-size: 16px;
+	color: #2f3033;
+}
+.pending .inputDiv select{
+	width: 188px;
+	height: 30px;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 2px;
+	border: solid 1px #d3d5db;
+}
+.pending table{
+	width: 100%;
+	margin-left: 15px;
+}
+.pending table tr:first-child{
+	background-color: #f6faff;
+}
+.pending table tr td{
+	padding: 10px 0;
+	text-align: center;
+	border: solid 1px #9ecdfd;
+}
+.pending table tr td span{
+	display: inline-block;
+	width: 100px;
+	background-color: #60a5f5;
+	border: none;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #ffffff;
+	cursor: pointer;
+	margin: 5px;
+    padding: 7px;
+    text-align: left;
+}
+.order{
+	background-color: #ffffff;
+	padding: 25px 30px 25px 20px;
+	margin-top: 10px;
+}
+.order .inputdiv{
+	margin-top: 25px;
+	margin-left: 15px;
+}
+.order .inputdiv .labelDiv{
+	margin-bottom: 20px;
+}
+.order .inputdiv .labelDiv label{
+	display: inline-block;
+	width: 80px;
+	font-size: 16px;
+	color: #2f3033;
+	text-align: right;
+    margin-right: 10px;
+}
+.order .inputdiv .labelDiv select{
+	width: 170px;
+	height: 30px;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 2px;
+	border: solid 1px #d3d5db; 
+	margin-right: 30px;
+}
+
+.order .inputdiv .labelDiv input{
+	width: 170px;
+	height: 30px;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 2px;
+	border: solid 1px #d3d5db;
+	margin-right: 30px;
+}
+.order .btnDiv{
+	width: 210px;
+	margin: 0 auto;
+}
+.order .btnDiv .research{
+	width: 100px;
+	height: 30px;
+	background-color: #60a5f5;
+	font-size: 14px;
+	color: #ffffff;
+	border: none;
+	border-radius: 4px;
+	margin-right: 10px;
+}
+.order .btnDiv .reset{
+	width: 100px;
+	height: 30px;
+	background-color: #f6faff;
+	border: none;
+	border-radius: 4px;
+	border: solid 1px #9ecdfd;
+	color: #60a5f5;
+}
+.order .orderResult{
+	margin-top: 100px;
+	margin-left: 15px;
+}
+.order .orderResult p{
+	padding-left: 20px;
+	font-size: 16px;
+	color: #2f3033;
+	margin-bottom: 20px;
+}
+.order .orderResult table{
+	width: 100%;
+}
+.order .orderResult table tr:first-child{
+	background-color: #f6faff;
+}
+.order .orderResult table tr td{
+	padding: 10px 0;
+	text-align: center;
+	border: solid 1px #9ecdfd;
+}
+
+.order .orderResult table tr td span{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #60a5f5;
+	border: none;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #ffffff;
+	cursor: pointer;
+}
+.order .orderResult table tr td span.revoke{
+	display: inline-block;
+	width: 69px;
+	height: 30px;
+	background-color: #777777;
+	font-size: 14px;
+	color: #ffffff;
+	margin-left: 10px;
+}
+/*弹窗样式*/
+p.alertTitle{
+	height: 60px;
+	line-height: 60px;
+	background-color: #60a5f5;
+	padding-left: 20px;
+	color: #ffffff;
+	font-size: 20px;
+}
+.alertDiv{
+	width: 593px;
+	/*height: 582px;*/
+	background-color: #ffffff;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+#orderManagement{
+	width: 593px;
+	background-color: #ffffff;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+.alertInputDiv{
+	padding: 60px 0;
+	position:relative;
+}
+.alertInputDiv .labelDiv{
+    width: 440px;
+    margin: 0 auto;
+    padding-bottom: 20px;	
+}
+.alertInputDiv .labelDiv label{
+	display: inline-block;
+	width: 115px;
+	margin-right: 10px;
+	font-size: 16px;
+	color: #2f3033;
+	text-align: right;
+}
+.alertInputDiv .labelDiv span{
+	display: inline-block;
+	font-size: 16px;
+	text-align: left;
+}
+.alertInputDiv .labelDiv input{
+	width: 188px;
+	height: 30px;
+	background-color: #f4f4f4;
+	border: none;
+	border-radius: 2px;
+	border: solid 1px #d3d5db;
+}
+.alertInputDiv .labelDiv select{
+	width: 188px;
+	height: 30px;
+	background-color: #ffffff;
+	border-radius: 2px;
+	border: solid 1px #d3d5db;
+}
+.alertInputDiv .labelDiv textarea{
+	width: 304px;
+	height: 176px;
+	background-color: #ffffff;
+	border-radius: 2px;
+	border: solid 1px #d3d5db;
+	vertical-align: top;
+}
+.alertbtnDiv{
+	width: 420px;
+	margin: 0 auto;
+}
+.alertsureDiv{
+	width: 200px;
+	margin: 0 auto;
+}
+.alertsureDiv .sure{
+	width: 200px;
+	height: 60px;
+	background-color: #60a5f5;
+	color: #ffffff;
+	font-size: 20px;
+	border: none;
+	border-radius: 4px;
+	margin-right: 20px;
+}
+.alertbtnDiv .sure{
+	width: 200px;
+	height: 60px;
+	background-color: #60a5f5;
+	color: #ffffff;
+	font-size: 20px;
+	border: none;
+	border-radius: 4px;
+	margin-right: 20px;
+}
+.alertbtnDiv .cancel{
+	width: 200px;
+	height: 60px;
+	background-color: #cccdcc;
+	color: #ffffff;
+	font-size: 20px;
+	border: none;
+	border-radius: 4px;
+}
+.successAlert{
+	display:none;
+    width: 524px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    background: rgba(0,0,0,1);
+    opacity: 0.7;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    left: 30px;
+    top: 100px;
+}

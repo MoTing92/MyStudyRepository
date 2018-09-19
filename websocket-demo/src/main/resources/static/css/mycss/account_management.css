@@ -1,0 +1,123 @@
+@charset "utf-8";
+/*账号管理左侧导航栏*/
+.accountContent{
+	margin-top: 10px;
+	width: 254px;	
+}
+.accountContent ul{
+	float: left;
+	width: 254px;
+	height: 100%;
+    background-color: #f5f7fa;
+}
+.accountContent ul li{
+	height: 48px;
+    line-height: 48px;
+    padding-left: 60px;
+    font-size: 16px;
+}
+.accountContent ul li.active {
+  background-color: #e1edfa;
+  border-right: 4px solid #60a5f5;
+}
+.accountContent ul li a i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.accountContent ul li a i.img1 {
+  background: transparent url("../../img/accountManagement/user.png") center no-repeat;
+}
+.accountContent ul li a span {
+  margin-left: 8px;
+  width: 64px;
+  display: inline-block;
+  text-align: center;
+}
+/*账号配置右边部分*/
+.rightContent{
+	width:calc(100%-254px);
+	width: -moz-calc(100%-254px);
+	width: -webkit-calc(100%-254px);
+	height: 100%;
+	background-color: #ffffff;
+	margin-top: 10px;
+	margin-left: 254px;
+	padding-bottom: 100px;
+}
+.rightContent h4{
+	height: 48px;
+	font-size:16px;
+	color: #2F3033;
+	line-height: 65px;
+	padding-left: 40px;
+}
+.rightContent .formDiv{
+	margin: 10px 70px;
+	position:relative;
+}
+.rightContent .formDiv label{
+	width: 100px;
+	display: inline-block;
+	text-align: right;
+	margin-right: 20px;
+	color: #2F3033;
+	font-size: 14px;
+}
+.rightContent .formDiv input{
+	width:188px;
+	height:30px; 
+	background:rgba(255,255,255,1);
+	 -webkit-border-radius:6px;/*//适配以webkit为核心的浏览器(chrome、safari等)*/
+     -moz-border-radius:6px;/*//适配firefox浏览器*/
+     -ms-border-radius:6px;/*//适配IE浏览器*/
+     -o-border-radius:6px;/*//适配opera浏览器*/
+     border-radius:6px;///*适配所有浏览器(需要放在最后面，类似于if..else if..else..)*/
+     border: none;
+     border:1px solid #DDDDDD;
+}
+.rightContent .btnDiv{
+	padding-left: 110px;
+    margin-top: 30px;
+}
+.rightContent .btnDiv .sureBtn{
+	width: 99px;
+    height: 30px;
+    background: rgba(96,165,245,1);
+    -webkit-border-radius:6px;
+     -moz-border-radius:6px;
+     -ms-border-radius:6px;
+     -o-border-radius:6px;
+     border-radius:6px;
+    border: none;
+    color: #ffffff;
+}
+.rightContent .btnDiv .resetBtn{
+	width: 99px;
+    height: 30px;
+    background: rgba(246,250,255,1);
+    border-radius: 4px;
+    border: none;
+    border: 1px solid #60A5F5;
+    margin-left: 40px;
+    color:#60A5F5;
+    
+}
+.errorDiv{
+   width: 360px;
+    height: 52px;
+    background: rgba(0,0,0,1);
+    opacity: 0.72;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    color: rgba(255,255,255,1);
+    line-height: 52px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;  
+    display:none;         
+}
